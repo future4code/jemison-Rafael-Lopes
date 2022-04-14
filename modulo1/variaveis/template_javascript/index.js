@@ -3,10 +3,10 @@
 //2 . Resposta: serão impressos os valores 10, 10 e 10
 /*3. Entender o que o comando faz e sugerir
  melhores nomes para as variáveis */
-//Resposta: O comando solicita informações do usuário. Apenas não sei porque o resultado da operação está incorreto
+//Resposta: O comando solicita informações do usuário e calcula o valor recebido por hora de trabalho
 let horasTrabalhadasDia = prompt("Quantas horas você trabalha por dia?");
 let remuneraçãoPorDia = prompt("Quanto você recebe por dia?");
-alert(`Voce recebe ${horasTrabalhadasDia/remuneraçãoPorDia} por hora`);
+alert(`Voce recebe ${remuneraçãoPorDia/horasTrabalhadasDia} por hora`);
 
 //Exercícios de escrita
 
