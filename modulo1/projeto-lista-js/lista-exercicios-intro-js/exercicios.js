@@ -1,7 +1,7 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
 // EXERCÍCIO 0A
-function soma(num1, num2) {
+/*function soma(num1, num2) {
     // implemente sua lógica aqui
     return num1 + num2
 }
@@ -35,58 +35,87 @@ function imprimeIdade() {
     console.log(idade);
 }
 
-// EXERCÍCIO 03  REVISAR CÓDIGO
+// EXERCÍCIO 03  
 function calculaIMC(peso, altura) {
     // implemente sua lógica aqui
-    let peso = Number(prompt("Digite o seu peso"));
-    let altura = Number(prompt("Digite a sua altura"));
-    let IMC = peso / (altura * altura);
-
-    retur = IMC
+    IMC = peso / (altura * altura);
+    return IMC
 }
-calculaIMC()
+calculaIMC(70, 1.7)
+console.log(IMC)
 
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
     // implemente sua lógica aqui
     // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
-    const nomeDoUsuario = prompt("Digite o seu nome");
+    //const nome = prompt("Digite o seu nome");
+    //const idade = prompt("Digite a sua idade");
+    //const email = prompt("Digite o seu email");
+    console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`);
 }
+imprimeInformacoesUsuario()
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
     // implemente sua lógica aqui
+    let cor1 = prompt("Informe sua primeira cor favorita");
+    let cor2 = prompt("Informe sua segunda cor favorita");
+    let cor3 = prompt("Informe sua terceira cor favorita");
+
+    let respcor1 = cor1;
+    let respcor2 = cor2;
+    let respcor3 = cor3;
+
+    console.log([cor1, cor2, cor3]);
 
 }
+imprimeTresCoresFavoritas()
 
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
     // implemente sua lógica aqui
-
+    return string.toUpperCase();
 }
+
 
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
     // implemente sua lógica aqui
+    let ingressosVendidosZeraPrejuizo = custo / valorIngresso;
+    return ingressosVendidosZeraPrejuizo;
 
 }
+
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
     // implemente sua lógica aqui
-
+    const tamanhoString1 = string1.length;
+    const tamanhoString2 = string2.length;
+    const trueFalse = tamanhoString1 === tamanhoString2;
+    return trueFalse;
 }
+
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
     // implemente sua lógica aqui
+    const listaDeAlfabeto = ["ola", "abc"];
+    const listaDeCoisas = ["teste", "porta", "batata"];
+    const primeiroDaListaDeAlfabeto = listaDeAlfabeto[0];
+    const primeiroDaListaDeCoisas = listaDeCoisas[0]
 
+    return primeiroDaListaDeCoisas, primeiroDaListaDeAlfabeto
 }
+retornaPrimeiroElemento(array)*/
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
     // implemente sua lógica aqui
-
+    const listaDeElementos2 = ["array"];
+    const ultimoElemento2 = listaDeElementos2.pop()
+    console.log(ultimoElemento2)
+    return ultimoElemento2
 }
 
 // EXERCÍCIO 11
