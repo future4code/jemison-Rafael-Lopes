@@ -1,7 +1,7 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
 // EXERCÍCIO 0A
-/*function soma(num1, num2) {
+function soma(num1, num2) {
     // implemente sua lógica aqui
     return num1 + num2
 }
@@ -100,35 +100,43 @@ function checaStringsMesmoTamanho(string1, string2) {
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
     // implemente sua lógica aqui
-    const listaDeAlfabeto = ["ola", "abc"];
-    const listaDeCoisas = ["teste", "porta", "batata"];
-    const primeiroDaListaDeAlfabeto = listaDeAlfabeto[0];
-    const primeiroDaListaDeCoisas = listaDeCoisas[0]
-
-    return primeiroDaListaDeCoisas, primeiroDaListaDeAlfabeto
+    return array.shift()
 }
-retornaPrimeiroElemento(array)*/
+
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
     // implemente sua lógica aqui
-    const listaDeElementos2 = ["array"];
-    const ultimoElemento2 = listaDeElementos2.pop()
-    console.log(ultimoElemento2)
-    return ultimoElemento2
+    return array.pop()
 }
+
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
     // implemente sua lógica aqui
+    const elementos = [1, 2, 3, 4, 5]
+    console.log(elementos)
+    elementos[0] = 5
+    elementos[4] = 1
+    console.log(elementos)
 
+    return elementos
 }
+trocaPrimeiroEUltimo(array)
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
     // implemente sua lógica aqui
-
+    const palavraMaiuscula1 = string1.toUpperCase()
+    console.log(palavraMaiuscula1)
+    const palavraMaiuscula2 = string2.toUpperCase()
+    console.log(palavraMaiuscula1)
+    const resComparacao = palavraMaiuscula1 === palavraMaiuscula2;
+    console.log(resComparacao)
+    return resComparacao
 }
+checaIgualdadeDesconsiderandoCase(string1, string2)
+
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
