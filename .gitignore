@@ -103,3 +103,6 @@ build/
 
 # TernJS port file
 .tern-port
+modulo1/projeto-lista-js/__MACOSX/lista-exercicios-intro-js/._.DS_Store
+modulo1/projeto-lista-js/__MACOSX/lista-exercicios-intro-js/._exercicios.js
+.gitignore
