@@ -7,33 +7,44 @@
 //--------------Exercício de Interpretação 2--------------------
 
 //a)Funcionalidade da função
+
+/*let textoDoUsuario = prompt("Insira um texto");
+
+const outraFuncao = function(texto) {
+    return texto.toLowerCase().includes("cenoura")
+}
+
+const resposta = outraFuncao(textoDoUsuario)
+console.log(resposta)*/
+
 /*Resposta: Solicitar um texto do usuário, transforma-lo em 
-frase tudo minuscula e incluir no texto a palavra cenoura*/
+frase tudo minuscula e verifica se no texto há alguma ocorrência da
+palavra cenoura*/
 
 //b)Determine qual será a saída no console para cada uma das 3 entradas do usuário:
-//i.Eu gosto de cenoura
-//ii.CENOURA é bom pra vista
-//iii.Cenouras crescem na terra
+//i.Eu gosto de cenoura //Retorna: true 
+//ii.CENOURA é bom pra vista //Retorna: true
+//iii.Cenouras crescem na terra //Retorna: true
 
 
 //--------------Exercício de Escrita de Código 1--------------------
-//a)
-function sobreMim() {
-    console.log('1.a)', "Eu sou Rafael, tenho 39 anos, moro em Goiânia e sou estudante.");
+//a)Sem receber parâmetros
+const nome = "Rafael"
+const idade = 39
+const cidade = "Goiânia"
+const estudante = "sou estudante"
 
+function sobreMim() {
+    console.log('1.a)', `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e ${estudante}`)
 }
 sobreMim()
 
-//b)
-function informacoesPessoais() {
-    const nome = "Rafael"
-    const idade = 39
-    const cidade = "Goiania"
-    const profissao = "Advogado"
-    console.log('1.b)', `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${profissao}`);
-
+//b)Recebe 4 parâmetros(nome, idade, cidade e profissão)
+function novaFuncao(nome, idade, cidade, profissao) {
+    return `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade} e sou ${profissao}`
 }
-informacoesPessoais()
+const frase = novaFuncao("Rafael", 39, "Aparecida de Goiânia", "advogado.")
+console.log(frase);
 
 //--------------Exercício de Escrita de Código 2--------------------
 
@@ -48,16 +59,14 @@ somaDeDoisNumeros(10, 15);
 function maiorOuIgual(num1, num2) {
     console.log('2.b)', num1 >= num2);
 }
-maiorOuIgual(10, 15) //false*/
+maiorOuIgual(35, 30) //true - 35 maior que 30
 
 //c)
-function parOuImpar() {
-    let n = Number(prompt("Digite um número"));
-    let operacao = n % 2;
-    console.log(operacao)
-
+function verificarParidade(numero) {
+    return numero % 2 === 0
 }
-parOuImpar()
+const parOuImpar = verificarParidade(5);
+console.log('c)', parOuImpar) // Se false o valor digitado foi impar se não, par.
 
 //d)
 function mensagem() {
@@ -67,6 +76,13 @@ function mensagem() {
     console.log("A frase em tudo maiusculo é:", string.toUpperCase());
 }
 mensagem()
+
+//Outra forma de escrever a mesma função
+
+function retornaTamanho(texto) {
+    return `${texto.length}, ${texto.toUpperCase()}`
+}
+console.log('d) Outra forma de escrever a função: O tamanho do texto é', retornaTamanho("Amanhã será um dia melhor!"))
 
 //--------------Exercício de Escrita de Código 3--------------------
 //soma
