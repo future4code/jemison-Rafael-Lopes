@@ -17,12 +17,12 @@ console.log("1.a", idadeDoUsuario);
 let idadeDoMelhorAmigo = Number(prompt("Qual a idade do seu melhor amigo(a)?"));
 console.log("1.b", idadeDoMelhorAmigo);
 
-/*c)Imprima no console a seguinte mensagem: "Sua idade é maior do que a do seu melhor amigo?", seguido pela resposta 
-(true ou false)*/
+/*c)Imprima no console a seguinte mensagem: "Sua idade é maior do que a do seu melhor amigo?"
+ seguido pela resposta (true ou false)*/
 console.log("Sua idade é maior do que a do seu melhor amigo (a)?");
 console.log("1.c", idadeDoUsuario > idadeDoMelhorAmigo);
 
-//Imprima na console a diferença de idade
+//Imprima na //console a diferença de idade
 resultado = idadeDoUsuario - idadeDoMelhorAmigo;
 console.log("1.d", resultado);
 
@@ -32,7 +32,7 @@ console.log("1.d", resultado);
 let numeroPar = Number(prompt("Digite um número par!"));
 console.log("2.a", numeroPar);
 
-//Imprima na console o resto da divisão desse número por 2
+//Imprima no console o resto da divisão desse número por 2
 let resto = numeroPar % 2;
 console.log("2.b", resto);
 
@@ -59,9 +59,8 @@ let resultado3_d
 console.log("resto da divisão de 11 % 2 é", 11 % 2);
 
 
-/*Exercícios de escrita de código n.3
-Pergunta ao usuário sua idade em anos. 
-Depois, imprime no console: */
+//Exercícios de escrita de código n.3
+//Pergunta ao usuário sua idade em anos. Depois, imprime no console:
 
 let idadeDoUsuarioAnos = prompt("Quantos anos você tem?");
 console.log("Você tem", idadeDoUsuarioAnos, "anos");
@@ -88,7 +87,101 @@ console.log("O primeiro numero é maior que segundo?", n1 > n2);
 console.log("O primeiro numero é igual ao segundo?", n1 === n2);
 
 //O primeiro número é divisível pelo segundo?
-console.log("O primeiro numero é divisível pelo segundo?", n1 === n2);
+console.log("O primeiro numero é divisível pelo segundo?", n1 % n2 === 0);
 
 //O segundo número é divisível pelo primeiro?
-console.log("O segundo numero é divisível pelo primeiro?", n2 === n1);
+console.log("O segundo numero é divisível pelo primeiro?", n2 % n1 === 0);
+
+//Desafio | Exercício n.1
+
+//(KELVIN) = (GRAUS_FAHRENHEIT - 32)*(5/9) + 273.15
+//(FAHRENHEIT) = (GRAUS_CELSIUS)*(9/5) + 32
+//(CELSIUS) = (GRAUS_FAHRENHEIT - 32)
+
+/*a) Calcule e mostre o valor de 77°F em  K, mostrando a unidade 
+no console também.*/
+let temp1Kelvin = (77 - 32) * (5 / 9) + 273.15;
+console.log('a)', "A temperatura de 77°F para Kelvin é:", temp1Kelvin, "°K");
+
+/*b) Calcule e mostre o valor de 80°C em °F, mostrando 
+a unidade no console também*/
+let temp1Fahrenheit = 80 * (9 / 5) + 32;
+console.log('b)', "A temperatura de 80°C em Fahrenheit é:", temp1Fahrenheit, "°F");
+
+//c) Calcule e mostre o valor de 30°C em °F e K, mostrando as unidades no //console também
+
+let temp2Fahrenheit = 30 * (9 / 5) + 32;
+console.log('c)', "A temperatura de 30ºC em Fahrenheit é:", temp2Fahrenheit, "ºF.", "E em graus Kelvin é:", (temp2Fahrenheit - 32) * (5 / 9) + 273.15, "°K.");
+
+/*d) Altere o último item para que o usuário insira o valor 
+em graus Celsius que ele deseja converter*/
+let tempUsuario = Number(prompt("Digite um temperatura em °C"));
+let temp2Kelvin = tempUsuario + 273.15;
+let temp3Fahrenheit = tempUsuario * (9 / 5) + 32;
+console.log('d)', "A temperatura de Celsius para Fahrenheit é:", temp3Fahrenheit, "°F.", "E em graus Kelvin é:", temp2Kelvin, "°K.");
+
+/*Exercício n.2 
+Faça um programa que receba a quantidade de quilowatts consumida 
+por uma residência.*/
+/*a) Calcule e mostre o valor a ser pago por uma residência que 
+consuma 280 quilowatt-hora. Sabe-se que o quilowatt-hora de 
+energia custa R$0.05.*/
+const quantKiloWattsConsumido = 280;
+const custoDaEnergiaKw = 0.05;
+const valorSemDesconto = Number(quantKiloWattsConsumido * 0.05);
+console.log('a)', `O valor a ser pago é igual a ${valorSemDesconto} reais`);
+
+let valorDoDesconto = valorSemDesconto * 0.15;
+let valorComDesconto = Number(valorSemDesconto - valorDoDesconto);
+console.log('b)', "O valor a ser pago com desconto é igual a ", valorComDesconto, "reais");
+
+//Exercício n.3
+/*a) Procure uma forma de converter libra (lb) para quilograma (kg) e escreva 
+um programa que converta 20lb para kg. Imprima  a resposta no //console da 
+seguinte forma: 20lb equivalem a X kg*/
+
+//Fórmula libra para kilograma: x / 0,45 = y libras;
+let libra = 20;
+const kilograma = 20 * 0.453592;
+console.log('a)', "20lb equivalem a ", kilograma, "kg");
+
+/*b) Procure uma forma de converter onça (oz) para quilograma (kg) e escreva um 
+programa que converta 10.5oz para kg. Imprima  a resposta no //console da seguinte 
+forma: 10.5oz equivalem a X kg*/
+let oz = 10.5;
+const Kg = oz * 0.29767;
+console.log('b)', "10.5oz equivalem a", Kg, "Kg.");
+
+/*c) Procure uma forma de converter milha (mi) para metro (m) e escreva um 
+programa que converta 100mi para m. Imprima  a resposta no //console da 
+seguinte forma: 100 mi equivalem a X m*/
+let milha = 100;
+const metros1 = milha * 1.609;
+console.log('c)', "100 mi equivalem a", metros1, "m.");
+
+/*d) Procure uma forma de converter pés (ft) para metro (m) e escreva um 
+programa que converta 50ft para m. Imprima  a resposta no //console da seguinte
+forma: 50ft equivalem a X m*/
+let foot = 50;
+const metros2 = foot * 0.3048;
+console.log('d)', "50ft equivalem a", metros2, "m.");
+
+/*e) Procure uma forma de converter galão (gal) para litro (l) e escreva um 
+programa que converta 103.56gal para litro. Imprima  a resposta no //console da 
+seguinte forma: 103.56gal equivalem a X l*/
+let gal = 103.56;
+const litros1 = gal * 3.7854;
+console.log('e)', "103.56gal equivalem a", litros1, "l.");
+
+/*f) Procure uma forma de converter xícara (xic) para litro (l) e escreva um 
+programa que converta 450xic para litro. Imprima  a resposta no //console da 
+seguinte forma: 450 xic equivalem a X l*/
+let quantidade1xic = 450;
+const litros2 = quantidade1xic * 0.24;
+console.log('f)', "450 xic equivalem a", litros2, "l.");
+
+/*g) Escolha ao menos um dos itens anteriores e modifique o programa para que 
+ele peça ao usuário o valor da unidade original antes de converter*/
+let valorDoUsuario = Number(prompt("Digite um valor em litros"));
+const quantidade2xic = valorDoUsuario * 4.1666667;
+console.log('g)', valorDoUsuario, "litros,", "equivalem a", quantidade2xic, "xic.");
