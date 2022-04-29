@@ -174,15 +174,30 @@ console.log(`Quantidade de Ingressos: ${quantidadeDeIngressos} ingressos`)
 //--------------------Cálculo do Valor-----------------------
 
 
-function valorDoIngresso(categoriaDesejada, etapaDoJogo, tipoDeJogo) {
-    if (categoriaDesejada === 1 && etapaDoJogo === SF && tipoDeJogo === DO) {
-        console.log(`Valor do Ingresso: R$ ${categoria_1_Sf}`)
-    } else if (categoriaDesejada === 2 && etapaDoJogo === SF && tipoDeJogo === DO) {
-        console.log(`Valor do Ingresso: R$ ${categoria_2_Sf}`)
-    } else if (categoriaDesejada === 3 && etapaDoJogo === SF && tipoDeJogo === DO) {
-        console.log(`Valor do Ingresso: R$ ${categoria_3_Sf}`)
-    } else if (categoriaDesejada === 4 && etapaDoJogo === SF && tipoDeJogo === DO) {
-        console.log(`Valor do Ingresso: R$ ${categoria_3_Sf}`)
-    }
-    valorDoIngresso(categoriaDesejada, etapaDoJogo, tipoDeJogo)
+function valorPorIngresso1(categoriaDesejada, etapaDoJogo, tipoDeJogo) {
+    let calculoDoIngresso = (categoriaDesejada === 1 && etapaDoJogo === SF && tipoDeJogo === DO)
+    console.log(`Valor do Ingresso: R$ ${categoria_1_Sf}`)
 }
+valorPorIngresso1(categoriaDesejada, etapaDoJogo, tipoDeJogo)
+
+function valorPorIngresso2(categoriaDesejada, etapaDoJogo, tipoDeJogo) {
+    let calculoDoIngresso = (categoriaDesejada === 2 && etapaDoJogo === SF && tipoDeJogo === DO)
+    console.log(`Valor do Ingresso: R$ ${categoria_1_Sf}`)
+}
+valorPorIngresso2(categoriaDesejada, etapaDoJogo, tipoDeJogo)
+
+
+
+
+
+// if (categoriaDesejada === 2 && etapaDoJogo === SF && tipoDeJogo === DO) {
+//     console.log(`Valor do Ingresso: R$ ${categoria_2_Sf}`)
+// }
+//     if (categoriaDesejada === 3 && etapaDoJogo === SF && tipoDeJogo === DO) {
+//         console.log(`Valor do Ingresso: R$ ${categoria_3_Sf}`)
+//     }
+//     if (categoriaDesejada === 4 && etapaDoJogo === SF && tipoDeJogo === DO) {
+//         console.log(`Valor do Ingresso: R$ ${categoria_3_Sf}`)
+//     }
+// }
+// valorPorIngresso(categoriaDesejada, etapaDoJogo, tipoDeJogo)
