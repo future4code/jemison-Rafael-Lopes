@@ -34,86 +34,92 @@ Portanto, o escopo global (const numero) não consegue acessar o escopo let mens
 // --------------------------Exercícios de Escrita de Código 01-----------------------------
 
 
-// const idade = Number(prompt('Informe a sua idade'));
+const idade = Number(prompt('Informe a sua idade'));
 
-// function allowedToDrive(idade) {
-//     if (idade >= 18) {
-//         console.log('Você pode dirigir.')
-//     } else {
-//         console.log('Você não pode dirigir.')
-//     }
-// }
-// allowedToDrive(idade)
+function allowedToDrive(idade) {
+    if (idade >= 18) {
+        console.log('Você pode dirigir.')
+    } else {
+        console.log('Você não pode dirigir.')
+    }
+}
+allowedToDrive(idade)
 
 
 // --------------------------Exercícios de Escrita de Código 02-----------------------------
 
-// let turnoDeEstudo = prompt("Informe com M, V ou N o turno que você estuda")
+let turnoDeEstudo = prompt("Informe com M, V ou N o turno que você estuda")
 
-// let turnoDeEstudo = prompt('Informe com M,V ou N o turno que voc~e estuda')
-// let M = 'Bom Dia!'
-// let V = 'Boa Tarde'
-// let N = 'Boa Noite!'
+let turnoDeEstudo = prompt('Informe com M,V ou N o turno que voc~e estuda')
+let M = 'Bom Dia!'
+let V = 'Boa Tarde'
+let N = 'Boa Noite!'
 
-// function verificaturno(M, V, N) {
-//     if (turnoDeEstudo === 'M')
-//         console.log('Bom Dia!')
-// }
-// if (turnoDeEstudo === 'V') {
-//     console.log('Boa Tarde')
-// }
-// if (turnoDeEstudo === 'N') {
-//     console.log('Boa Noite!')
-// }
-// verificaturno(M, V, N)
+function verificaturno(M, V, N) {
+    if (turnoDeEstudo === 'M')
+        console.log('Bom Dia!')
+}
+if (turnoDeEstudo === 'V') {
+    console.log('Boa Tarde')
+}
+if (turnoDeEstudo === 'N') {
+    console.log('Boa Noite!')
+}
+verificaturno(M, V, N)
 
 
 // --------------------------Exercícios de Escrita de Código 03-----------------------------
 
-// let turnoDeEstudo = prompt('Informe com M, V ou N o turno que você estuda')
 
-// switch (turnoDeEstudo) {
-//     case 'M':
-//         console.log('Bom Dia!')
-//         break
-//     case 'V':
-//         console.log('Boa Tarde!')
-//         break
-//     case 'N':
-//         console.log('Boa Noite!')
-// }
+let turnoDeEstudo = prompt('Informe com M, V ou N o turno que você estuda')
+
+switch (turnoDeEstudo) {
+    case 'M':
+        console.log('Bom Dia!')
+        break
+    case 'V':
+        console.log('Boa Tarde!')
+        break
+    case 'N':
+        console.log('Boa Noite!')
+}
 
 // --------------------------Exercícios de Escrita de Código 04-----------------------------
 
-// let genero = prompt('Qual o gênero de filme deseja assistir?')
-// let valor = Number(prompt('Qual o preço do ingresso?'))
 
-// function assiteFilmeSe(genero, valor) {
-//     if (genero === 'fantasia' && valor < 15) {
-//         console.log('Bom Filme!')
-//     } else {
-//         console.log('Escolha outro filme :(')
-//     }
-// }
-// assiteFilmeSe(genero, valor)
+let genero = prompt('Qual o gênero de filme deseja assistir?')
+let valor = Number(prompt('Qual o preço do ingresso?'))
+
+function assiteFilmeSe(genero, valor) {
+    if (genero === 'fantasia' && valor < 15) {
+        console.log('Bom Filme!')
+    } else {
+        console.log('Escolha outro filme :(')
+    }
+}
+assiteFilmeSe(genero, valor)
+
 
 // ---------------------------------Desafio Opcional 01-----------------------------------
 
-// let genero = prompt('Qual o gênero de filme deseja assistir?')
-// let valor = Number(prompt('Qual o preço do ingresso?'))
-// let lanchinho = prompt('Qual lanchinho vai comprar?')
 
-// function assiteFilmeSe(genero, valor) {
-//     if (genero === 'fantasia' && valor < 15) {
-//         console.log('Bom Filme!')
-//         console.log(`Aproveite o seu ${lanchinho}!`)
-//     } else {
-//         console.log('Escolha outro filme :(')
-//     }
-// }
-// assiteFilmeSe(genero, valor)
+let genero = prompt('Qual o gênero de filme deseja assistir?')
+let valor = Number(prompt('Qual o preço do ingresso?'))
+let lanchinho = prompt('Qual lanchinho vai comprar?')
+
+function assiteFilmeSe(genero, valor) {
+    if (genero === 'fantasia' && valor < 15) {
+        console.log('Bom Filme!')
+        console.log(`Aproveite o seu ${lanchinho}!`)
+    } else {
+        console.log('Escolha outro filme :(')
+    }
+ }
+assiteFilmeSe(genero, valor)
+
 
 // ---------------------------------Desafio Opcional 02-----------------------------------
+
 
 const IN = "Internacional"
 const DO = "Nacional"
@@ -137,7 +143,9 @@ const categoria_2_Fi = Number(1320)
 const categoria_3_Fi = Number(880)
 const categoria_4_Fi = Number(330)
 
-// const dadosDaCompra = "---Dados da Compra---"
+
+//----------------------Dados da Compra---------------------------
+
 
 let nomeCompleto = prompt('Informe o Seu Nome Completo')
 console.log('---Dados da Compra---')
@@ -171,6 +179,7 @@ console.log('Categoria:', categoriaDesejada)
 let quantidadeDeIngressos = Number(prompt('Informe a Quantidade de Ingressos que Você Deseja'))
 console.log(`Quantidade de Ingressos: ${quantidadeDeIngressos} ingressos`)
 
+
 //--------------------Cálculo do Valor-----------------------
 
 
@@ -186,3 +195,4 @@ function valorDoIngresso(categoriaDesejada, etapaDoJogo, tipoDeJogo) {
     }
     valorDoIngresso(categoriaDesejada, etapaDoJogo, tipoDeJogo)
 }
+
