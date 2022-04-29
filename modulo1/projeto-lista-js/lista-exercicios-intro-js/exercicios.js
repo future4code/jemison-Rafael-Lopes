@@ -1,19 +1,20 @@
 // EXEMPLOS DE IMPLEMENTAÇÃO ---------------------------------------------------------------
 
 // EXERCÍCIO 0A
-function soma(num1, num2) {
-    // implemente sua lógica aqui
-    return num1 + num2
-}
+// function soma(num1, num2) {
+// implemente sua lógica aqui
+
+//     return num1 + num2
+// }
 
 
 // EXERCÍCIO 0B
-function imprimeMensagem() {
-    // implemente sua lógica aqui
-    const mensagem = prompt('Digite uma mensagem!')
+// function imprimeMensagem() {
+// implemente sua lógica aqui
 
-    console.log(mensagem)
-}
+//     const mensagem = prompt('Digite uma mensagem!')
+//     console.log(mensagem)
+// }
 
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
@@ -47,10 +48,10 @@ console.log(IMC)
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
     // implemente sua lógica aqui
-    // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
-    //const nome = prompt("Digite o seu nome");
-    //const idade = prompt("Digite a sua idade");
-    //const email = prompt("Digite o seu email");
+    "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
+    const nome = prompt("Digite o seu nome");
+    const idade = prompt("Digite a sua idade");
+    const email = prompt("Digite o seu email");
     console.log(`Meu nome é ${nome}, tenho ${idade} anos, e o meu email é ${email}.`);
 }
 imprimeInformacoesUsuario()
@@ -67,7 +68,6 @@ function imprimeTresCoresFavoritas() {
     let respcor3 = cor3;
 
     console.log([cor1, cor2, cor3]);
-
 }
 imprimeTresCoresFavoritas()
 
@@ -83,7 +83,6 @@ function calculaIngressosEspetaculo(custo, valorIngresso) {
     // implemente sua lógica aqui
     let ingressosVendidosZeraPrejuizo = custo / valorIngresso;
     return ingressosVendidosZeraPrejuizo;
-
 }
 
 
@@ -100,27 +99,25 @@ function checaStringsMesmoTamanho(string1, string2) {
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
     // implemente sua lógica aqui
-    return array.shift()
+    return array[0]
 }
 
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
     // implemente sua lógica aqui
-    return array.pop()
+    return array[array.length - 1]
 }
-
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
     // implemente sua lógica aqui
-    const elementos = [1, 2, 3, 4, 5]
-    console.log(elementos)
-    elementos[0] = 5
-    elementos[4] = 1
-    console.log(elementos)
+    const primeiro = retornaPrimeiroElemento(array)
+    const ultimo = retornaUltimoElemento(array)
 
-    return elementos
+    array[0] = ultimo
+    array[array.length - 1] = primeiro
+    return array
 }
 trocaPrimeiroEUltimo(array)
 
@@ -130,7 +127,7 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
     const palavraMaiuscula1 = string1.toUpperCase()
     console.log(palavraMaiuscula1)
     const palavraMaiuscula2 = string2.toUpperCase()
-    console.log(palavraMaiuscula1)
+    console.log(palavraMaiuscula2)
     const resComparacao = palavraMaiuscula1 === palavraMaiuscula2;
     console.log(resComparacao)
     return resComparacao
@@ -141,17 +138,37 @@ checaIgualdadeDesconsiderandoCase(string1, string2)
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
     // implemente sua lógica aqui
+    let anoAtual = Number(prompt('Informe o ano atual'));
+    let anoDeNascimento = Number(prompt('Informe seu ano de nascimento'));
+    let dataDeEmissaoDoRG = Number(prompt('Informe a data de emissão do seu RG'))
 
+    const idade = anoAtual - anoDeNascimento
+    const tempoDeEmissaoDoRG = anoAtual - dataDeEmissaoDoRG
+
+    const condicao1 = idade <= 20 && tempoDeEmissaoDoRG >= 5
+
+    const condicao2 = idade > 20 && idade <= 50 && tempoDeEmissaoDoRG >= 10
+
+    const condicao3 = idade > 50 && tempoDeEmissaoDoRG >= 15
+
+    console.log(condicao1 || condicao2 || condicao3)
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
     // implemente sua lógica aqui
-
+    const bissexto = (ano % 400 === 0) || (ano % 4 === 0) && (ano % 100 !== 0)
+    return bissexto
 }
+
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
     // implemente sua lógica aqui
 
+    let idade = prompt("Você tem mais de 18 anos?");
+    let ensinoMedio = prompt("Você possui o ensino médio completo?");
+    let disponibilidade = prompt("Você possui disponibilidade exclusiva durante os horários do curso?")
+
+    console.log(idade === "sim" && ensinoMedio === "sim" && disponibilidade === "sim")
 }
