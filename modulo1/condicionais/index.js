@@ -25,93 +25,86 @@ verifica se um número divisível por 2 é igual a 0 como resultado */
 // a)A primeira linha está solicitando um número do usuário
 
 /* b)Se o usuário digitou o número 10 mensagem seria: 'Esse número passou no teste'
-Poré, se o usuário digitou -10 o código não retornará mensagem alguma */
+Porem, se o usuário digitou -10 o código não retornará mensagem alguma */
 
-/* c)Sim, haverá erro no console pois, a variável mensagem não foi definida.
+/* c)Sim, haverá erro no console pois, a variável mensagem não foi criada no bloco 'if' e não pode ser acessada pelo escopo pai.
 Portanto, o escopo global (const numero) não consegue acessar o escopo let mensagem */
 
 
-// --------------------------Exercícios de Escrita de Código 01-----------------------------
+// --------------------------Exercícios de Escrita de Código 01-----------------------------------
 
 
-// const idade = Number(prompt('Informe a sua idade'));
+const idade = Number(prompt('Informe a sua idade'));
 
-// function allowedToDrive(idade) {
-//     if (idade >= 18) {
-//         console.log('Você pode dirigir.')
-//     } else {
-//         console.log('Você não pode dirigir.')
-//     }
-// }
-// allowedToDrive(idade)
-
-
-// --------------------------Exercícios de Escrita de Código 02-----------------------------
-
-// let turnoDeEstudo = prompt("Informe com M, V ou N o turno que você estuda")
-
-// let turnoDeEstudo = prompt('Informe com M,V ou N o turno que voc~e estuda')
-// let M = 'Bom Dia!'
-// let V = 'Boa Tarde'
-// let N = 'Boa Noite!'
-
-// function verificaturno(M, V, N) {
-//     if (turnoDeEstudo === 'M')
-//         console.log('Bom Dia!')
-// }
-// if (turnoDeEstudo === 'V') {
-//     console.log('Boa Tarde')
-// }
-// if (turnoDeEstudo === 'N') {
-//     console.log('Boa Noite!')
-// }
-// verificaturno(M, V, N)
+function allowedToDrive(idade) {
+    if (idade >= 18) {
+        console.log('Você pode dirigir.')
+    } else {
+        console.log('Você não pode dirigir.')
+    }
+}
+allowedToDrive(idade)
 
 
-// --------------------------Exercícios de Escrita de Código 03-----------------------------
+// --------------------------Exercícios de Escrita de Código 02-----------------------------------
 
-// let turnoDeEstudo = prompt('Informe com M, V ou N o turno que você estuda')
+let turno = prompt("Informe com M (matutino), V(vespertino) ou N(noturno) o turno que você estuda")
 
-// switch (turnoDeEstudo) {
-//     case 'M':
-//         console.log('Bom Dia!')
-//         break
-//     case 'V':
-//         console.log('Boa Tarde!')
-//         break
-//     case 'N':
-//         console.log('Boa Noite!')
-// }
+if (turno === "M") {
+    console.log("Bom Dia!");
+} else if (turno === "V") {
+    console.log("Boa Tarde!");
+} else if (turno === "N") {
+    console.log("Boa Noite!");
+} else {
+    console.log("Utilize apenas: M,V ou N!")
+}
+
+// --------------------------Exercícios de Escrita de Código 03-----------------------------------
+
+let turno2 = prompt('Informe com M, V ou N o turno que você estuda')
+
+switch (turno2) {
+    case 'M':
+        console.log('Bom Dia!');
+        break;
+    case 'V':
+        console.log('Boa Tarde!');
+        break;
+    case 'N':
+        console.log('Boa Noite!');
+        break;
+    default:
+        console.log("Utilize apenas: M,V ou N!")
+        break
+}
 
 // --------------------------Exercícios de Escrita de Código 04-----------------------------
 
-// let genero = prompt('Qual o gênero de filme deseja assistir?')
-// let valor = Number(prompt('Qual o preço do ingresso?'))
+let genero = prompt('Qual o gênero de filme deseja assistir?')
+let valor = Number(prompt('Qual o preço do ingresso?'))
 
-// function assiteFilmeSe(genero, valor) {
-//     if (genero === 'fantasia' && valor < 15) {
-//         console.log('Bom Filme!')
-//     } else {
-//         console.log('Escolha outro filme :(')
-//     }
-// }
-// assiteFilmeSe(genero, valor)
+function assiteFilmeSe(genero, valor) {
+    if (genero === 'fantasia' && valor < 15) {
+        console.log('Bom Filme!')
+    } else {
+        console.log("Escolha outro filme :(")
+    }
+}
+assiteFilmeSe(genero, valor)
 
 // ---------------------------------Desafio Opcional 01-----------------------------------
 
-// let genero = prompt('Qual o gênero de filme deseja assistir?')
-// let valor = Number(prompt('Qual o preço do ingresso?'))
-// let lanchinho = prompt('Qual lanchinho vai comprar?')
+let genero2 = prompt('Qual o gênero de filme deseja assistir?')
+let valor2 = Number(prompt('Qual o preço do ingresso?'))
+let lanchinho = prompt('Qual lanchinho vai comprar?')
 
-// function assiteFilmeSe(genero, valor) {
-//     if (genero === 'fantasia' && valor < 15) {
-//         console.log('Bom Filme!')
-//         console.log(`Aproveite o seu ${lanchinho}!`)
-//     } else {
-//         console.log('Escolha outro filme :(')
-//     }
-// }
-// assiteFilmeSe(genero, valor)
+if (genero2 === 'fantasia' && valor2 < 15) {
+    console.log('Bom Filme!')
+    console.log(`Aproveite o seu ${lanchinho}!`)
+} else {
+    console.log('Escolha outro filme :(')
+}
 
 // ---------------------------------Desafio Opcional 02-----------------------------------
 
@@ -122,82 +115,117 @@ const SF = "Semi-final"
 const DT = "Decisão de 3º lugar"
 const FI = "Final"
 
-const categoria_1_Sf = Number(1320)
-const categoria_2_Sf = Number(880)
-const categoria_3_Sf = Number(550)
-const categoria_4_Sf = Number(220)
-
-const categoria_1_Dt = Number(660)
-const categoria_2_Dt = Number(440)
-const categoria_3_Dt = Number(330)
-const categoria_4_Dt = Number(170)
-
-const categoria_1_Fi = Number(1980)
-const categoria_2_Fi = Number(1320)
-const categoria_3_Fi = Number(880)
-const categoria_4_Fi = Number(330)
-
-// const dadosDaCompra = "---Dados da Compra---"
-
 let nomeCompleto = prompt('Informe o Seu Nome Completo')
-console.log('---Dados da Compra---')
-console.log("Nome do Cliente: " + nomeCompleto)
-
-let tipoDeJogo = prompt(`Escolha o Tipo do Jogo que Deja Assistir: IN: (${IN})  ou DO: (${DO})?`)
-switch (tipoDeJogo) {
-    case 'DO':
-        console.log(`Tipo do Jogo: ${DO}`)
-        break
-    case 'IN':
-        console.log(`Tipo do Jogo:  ${IN}`)
-        break
-}
-
+let tipoDeJogo = prompt(`Escolha o Tipo do Jogo que Deja Assistir: IN: ${IN}  ou DO: ${DO}?`)
 let etapaDoJogo = prompt(`Informe a Etapa do Jogo que Deseja: SF:  ${SF}, DT: ${DT}, FI: ${FI}`)
+let categoriaDoJogo = Number(prompt('Informe a Categoria do Jogo que Deseja Assistir: 1,2,3,4'))
+let quantidadeDeIngressos = Number(prompt('Informe a Quantidade de Ingressos que Você Deseja'))
+
+let valorDoIngresso
 switch (etapaDoJogo) {
     case 'SF':
-        console.log(`Etapa do Jogo: ${SF}`)
-        break
+        switch (categoriaDoJogo) {
+            case 1:
+                valorDoIngresso = 1320;
+                break;
+            case 2:
+                valorDoIngresso = 880;
+                break;
+            case 3:
+                valorDoIngresso = 550;
+                break;
+            case 4:
+                valorDoIngresso = 220;
+                break;
+            default:
+                'Escolha Uma Opção Válida!';
+                break;
+        }
+        break;
+
     case 'DT':
-        console.log(`Etapa do Jogo: ${DT}`)
-        break
+        switch (categoriaDoJogo) {
+            case 1:
+                valorDoIngresso = 660;
+                break;
+            case 2:
+                valorDoIngresso = 440;
+                break;
+            case 3:
+                valorDoIngresso = 330;
+                break;
+            case 4:
+                valorDoIngresso = 170;
+                break;
+            default:
+                'Escolha Uma Opção Válida!';
+                break;
+        }
+        break;
+
     case 'FI':
-        console.log(`Etapa do Jogo: ${FI}`)
+        switch (categoriaDoJogo) {
+            case 1:
+                valorDoIngresso = 1980;
+                break;
+            case 2:
+                valorDoIngresso = 1320;
+                break;
+            case 3:
+                valorDoIngresso = 880;
+                break;
+            case 4:
+                valorDoIngresso = 330;
+                break;
+            default:
+                'Escolha Uma Opção Válida!';
+                break;
+        }
+        break;
+    default:
+        break;
 }
 
-let categoriaDesejada = prompt('Escolha uma Categoria: 1, 2, 3 ou 4')
-console.log('Categoria:', categoriaDesejada)
-
-let quantidadeDeIngressos = Number(prompt('Informe a Quantidade de Ingressos que Você Deseja'))
-console.log(`Quantidade de Ingressos: ${quantidadeDeIngressos} ingressos`)
-
-//--------------------Cálculo do Valor-----------------------
-
-
-function valorPorIngresso1(categoriaDesejada, etapaDoJogo, tipoDeJogo) {
-    let calculoDoIngresso = (categoriaDesejada === 1 && etapaDoJogo === SF && tipoDeJogo === DO)
-    console.log(`Valor do Ingresso: R$ ${categoria_1_Sf}`)
+if (tipoDeJogo === "IN") {
+    valorDoIngresso = valorDoIngresso * 4.1;
 }
-valorPorIngresso1(categoriaDesejada, etapaDoJogo, tipoDeJogo)
 
-function valorPorIngresso2(categoriaDesejada, etapaDoJogo, tipoDeJogo) {
-    let calculoDoIngresso = (categoriaDesejada === 2 && etapaDoJogo === SF && tipoDeJogo === DO)
-    console.log(`Valor do Ingresso: R$ ${categoria_1_Sf}`)
+
+let Nacional_Internacional;
+switch (tipoDeJogo) {
+    case "DO":
+        tipoDeJogo = "Nacional";
+        break;
+    case "IN":
+        tipoDeJogo = "Internacional";
+        break;
+    default:
+        'Escolha Uma Opção Válida!';
+        break;
 }
-valorPorIngresso2(categoriaDesejada, etapaDoJogo, tipoDeJogo)
 
+let etapaDoJogoInt;
+switch (etapaDoJogo) {
+    case "SF":
+        etapaDoJogo = "Semi-Final";
+        break;
+    case "DT":
+        etapaDoJogo = "Decisão de 3º lugar";
+        break;
+    case "FI":
+        etapaDoJogo = "Final";
+        break;
+    default:
+        etapaDoJogo = 'Escolha Uma Opção Válida!';
+        break;
+}
 
-
-
-
-// if (categoriaDesejada === 2 && etapaDoJogo === SF && tipoDeJogo === DO) {
-//     console.log(`Valor do Ingresso: R$ ${categoria_2_Sf}`)
-// }
-//     if (categoriaDesejada === 3 && etapaDoJogo === SF && tipoDeJogo === DO) {
-//         console.log(`Valor do Ingresso: R$ ${categoria_3_Sf}`)
-//     }
-//     if (categoriaDesejada === 4 && etapaDoJogo === SF && tipoDeJogo === DO) {
-//         console.log(`Valor do Ingresso: R$ ${categoria_3_Sf}`)
-//     }
-// }
-// valorPorIngresso(categoriaDesejada, etapaDoJogo, tipoDeJogo)
+console.log('---Dados da Compra---');
+console.log(`Nome do Cliente: ${nomeCompleto}`);
+console.log(`Tipo do Jogo: ${tipoDeJogo}`);
+console.log(`Etapa do Jogo: ${etapaDoJogo}`);
+console.log(`Categoria: ${categoriaDoJogo}`)
+console.log(`Quantidade de Ingressos: ${quantidadeDeIngressos}`);
+console.log('---Valores---');
+console.log("Valor do Ingresso:", Number(valorDoIngresso));
+console.log('Valor Total da Compra:', Number(valorDoIngresso * quantidadeDeIngressos));
