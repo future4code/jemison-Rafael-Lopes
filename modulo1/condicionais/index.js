@@ -36,14 +36,13 @@ Portanto, o escopo global (const numero) não consegue acessar o escopo let mens
 
 const idade = Number(prompt('Informe a sua idade'));
 
-function allowedToDrive(idade) {
-    if (idade >= 18) {
-        console.log('Você pode dirigir.')
-    } else {
-        console.log('Você não pode dirigir.')
-    }
+
+if (idade >= 18) {
+    console.log('Você pode dirigir.')
+} else {
+    console.log('Você não pode dirigir.')
 }
-allowedToDrive(idade)
+
 
 
 // --------------------------Exercícios de Escrita de Código 02-----------------------------------
@@ -107,6 +106,7 @@ if (genero2 === 'fantasia' && valor2 < 15) {
 }
 
 // ---------------------------------Desafio Opcional 02-----------------------------------
+
 
 const IN = "Internacional"
 const DO = "Nacional"
