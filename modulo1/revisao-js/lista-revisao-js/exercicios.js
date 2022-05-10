@@ -12,7 +12,7 @@ console.log(retornaTamanhoArray([3, 2, 1, 4, 7]))
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-
+    return array.reverse()
 }
 
 // EXERCÍCIO 03
