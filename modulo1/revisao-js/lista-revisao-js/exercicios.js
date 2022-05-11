@@ -17,22 +17,34 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-
+    array.sort(function(array)) {
+        return array
+    }
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-
+    if (array % 2 === 0) {
+        return array
+    }
 }
+retornaNumerosPares()
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-
+    return array * 2
 }
+retornaNumerosParesElevadosADois()
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-
+    let maiorNumero = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > maiorNumero) {
+            maiorNumero = array[i]
+        }
+    }
+    return maiorNumero
 }
 
 // EXERCÍCIO 07
