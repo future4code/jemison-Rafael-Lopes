@@ -17,10 +17,30 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-    array.sort(function(array)) {
-        return array
-    }
+    const numeros = [36, 12, 56, 7, 3];
+    numeros.sort();
+    return numeros
+
 }
+// retornaArrayOrdenado()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
