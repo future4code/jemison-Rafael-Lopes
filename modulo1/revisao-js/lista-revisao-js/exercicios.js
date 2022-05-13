@@ -16,39 +16,20 @@ function retornaArrayInvertido(array) {
 }
 
 // EXERCÍCIO 03
+
 function retornaArrayOrdenado(array) {
-    const numeros = [36, 12, 56, 7, 3];
-    numeros.sort();
-    return numeros
-
+    return array.sort(function(a, b) {
+        return a > b
+    })
 }
-// retornaArrayOrdenado()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
     if (array % 2 === 0) {
-        return array
+        return
+
     }
 }
-retornaNumerosPares()
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
@@ -84,6 +65,8 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
+
+    // usar loops e if
 
 }
 
