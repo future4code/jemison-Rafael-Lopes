@@ -76,14 +76,23 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
     }
 }
 
-
-
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
+    var segundoMaior = [array[0]];
+    var resultado = [];
 
-    // usar loops e if
-
+    array.sort(function(a, b) {
+        return a - b;
+    });
+    for (var i = 1; i < array.length; i++) {
+        if (array[i - 1] < array[i]) {
+            segundoMaior.push(array[i]);
+        }
+    }
+    resultado.push(segundoMaior[segundoMaior.length - 2], segundoMaior[1]);
+    return resultado
 }
+
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
