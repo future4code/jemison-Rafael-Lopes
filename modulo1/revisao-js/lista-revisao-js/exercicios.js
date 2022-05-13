@@ -25,19 +25,21 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-    let pares = array.filter(array => array % 2 == 0);
+    let pares = array.filter(array => array % 2 === 0);
     return pares
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    return array.sort(function(a, b) {
-        let array = (a ** 2);
-        return array
-
-
+    let numeros = array.filter(array => array % 2 === 0);
+    return numeros.map(function(pares) {
+        return Math.pow(pares, 2);
     })
 }
+
+
+
+
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
