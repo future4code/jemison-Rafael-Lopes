@@ -37,10 +37,6 @@ function retornaNumerosParesElevadosADois(array) {
     })
 }
 
-
-
-
-
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
     let maiorNumero = array[0];
@@ -54,14 +50,21 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
+    const maiorNumero = Math.max(num1, num2)
+    return maiorNumero
 }
+
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-
+    let primeirosPares = [];
+    for (let i = 0; primeirosPares.length < n; i++) {
+        if (i % 2 === 0) {
+            primeirosPares.push(i);
+        }
+    }
+    return primeirosPares;
 }
-
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
 
