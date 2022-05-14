@@ -108,8 +108,19 @@ function retornaChamadaDeFilme(filme) {
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-
+    const pessoaAnonimizada = {
+        nome: "Astrodev",
+        idade: 25,
+        endereco: "Rua do Futuro, 4",
+        eamil: "astrodev@labenu.com.br",
+    }
+    const novoNome = {
+        ...pessoa,
+        nome: 'ANÔNIMO',
+    }
+    return novoNome
 }
+
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
