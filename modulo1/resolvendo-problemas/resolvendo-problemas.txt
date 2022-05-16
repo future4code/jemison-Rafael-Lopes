@@ -1,0 +1,44 @@
+// ------------- Exercício de fixação do conhecimento -------------- \\
+
+Faça um resumo sobre quais são os 7 passos fundamentais para a 
+resolução de problemas e como eles podem nos ajudar a solucionar
+nossos desafios de programação.
+
+Os 7 passo fundamentais para a resolução de preoblemas são:
+
+1-  Ter Atenção no Enunciado;
+2 - Retirar Informações Relevantes;
+3 - Pensar nas Entradas e Saídas;
+4 - Fazer Um Esquema Visual;
+5 - Criar Um Código Feio;
+6 - Testar: Força-Bruta;
+7 - Refatorar.
+
+Os 7 passos acima listados nos ajudam nos desafios da programação
+das seguintes formas:
+
+1 - Ajuda a compreender o que de fato está sendo solicitado para fazer.
+
+2 - Ao ler com atenção conseguimos retirar informações relevantes que 
+poderão ser palavras chaves para nosso código e/ou função.
+
+3 - Pensar nas entradas e saídas possibilita identificar como e quais 
+serão os dados recebidos e o que se espera obter a partir desses dados.
+
+4 - O uso do esquema visual auxilia na resolução do problema a ser 
+resolvido, as possíveis entradas, como será montada a lógica para 
+resolver o problema, possíveis cenários e o que deve ser retornado 
+como objetivo final.
+
+5 - Criar um código feio nos possibilita tirar primeiro a idéia do
+papael e implementá-la. Isso nos ajuda a poupar tempo e ganhar produtividade
+no trabalho que está sendo realizado.
+
+6 - No que diz respeito à testar o código utilizando a "força bruta",
+permite que a idéia seja implementada e validada. 
+Pode ser realizada utilizando o portugol e depois implementando para 
+a linguagem de programação JavaScript.
+
+7 - Por fim, após implementados os 6 prieiros passos e o código estiver
+funcional, poderemos levar nossa atenção para o sétimo passo que é
+a refatoração, buscando um código mais limpo, reutilizável e performático. 
