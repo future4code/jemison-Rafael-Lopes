@@ -1,0 +1,44 @@
+    body {
+        width: 100%;
+        height: auto;
+        background-image: url("./img/carrossel/shoes-2425122_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-color: black;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    #navegation-bar {
+        background-color: black;
+        text-align: center;
+        margin-bottom: 10rem;
+        padding: 1rem;
+    }
+    
+    a {
+        margin: 28px;
+        font-size: 20px;
+    }
+    
+    #main-text {
+        font-size: 22px;
+        text-align: center;
+        /* margin: 5rem; */
+        padding: 20px;
+        background-color: white;
+        opacity: 35%;
+        color: rgb(25, 25, 177);
+    }
+    
+    #first-paragraph {
+        text-align: center;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    a {
+        color: white;
+    }
