@@ -1,0 +1,102 @@
+    body {
+        width: 100%;
+        height: auto;
+        background-image: url("./img/carrossel/shoes-2425122_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-color: black;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    #navegation-bar {
+        text-align: center;
+        margin-bottom: 10rem;
+        padding: 1rem;
+    }
+    
+    a {
+        margin: 28px;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    
+    #main-text {
+        font-size: 22px;
+        text-align: center;
+        padding: 20px;
+        background-color: black;
+        opacity: 65%;
+        color: white;
+    }
+    
+    #ctrl-first-paragraph {
+        text-align: center;
+        font-size: 21px;
+    }
+    
+    #first-paragraph {
+        text-align: center;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    a {
+        color: white;
+    }
+    
+    #footer-align {
+        display: block;
+        background-color: #8e67da;
+        text-align: center;
+        margin-top: 300px;
+        padding-top: 3px;
+        padding-bottom: 15px;
+    }
+    
+    .icons-align {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 1em;
+        padding-left: 1%;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .tbl {
+        background-color: #8e67da;
+        display: inline-block;
+        color: black;
+        text-align: center;
+        margin-left: 41rem;
+        margin-top: 5rem;
+        padding: 40px;
+    }
+    
+    #form {
+        text-align: center;
+        font-size: 20px;
+        margin: 30px;
+        line-height: 25px;
+    }
+    
+    #buttom {
+        background-color: light-gray;
+        font-size: 20px;
+        color: #8e67da;
+    }
+    
+    #employee-list {
+        background-color: #8e67da;
+        text-align: center;
+        font-size: 20px;
+        line-height: 50px;
+        padding: 20px;
+        margin-left: 50rem;
+        margin-right: 50rem;
+    }
