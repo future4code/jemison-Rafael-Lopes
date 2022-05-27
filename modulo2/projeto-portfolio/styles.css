@@ -109,17 +109,25 @@
                     padding: 30px;
                 }
                 
-                #container-experience {
+                .container {
                     display: block;
                     text-align: center;
                     /* margin-bottom: 30px; */
                     border-width: medium;
                     border-style: groove;
                     border-color: cdb4db;
-                    text-align: center;
                     line-height: 1.6;
                 }
                 
-                li {
+                #skill-background {
+                    background-color: hsl(208, 97%, 90%);
+                    text-align: center;
+                    padding: 30px;
+                }
+                
+                #soft-skills {
                     list-style: square;
+                    text-align: justify;
+                    display: block;
+                    margin-left: 200px;
                 }
