@@ -96,7 +96,7 @@
                 
                 #container-academic {
                     text-align: center;
-                    margin-bottom: 30px;
+                    /* margin-bottom: 30px; */
                     border-width: medium;
                     border-style: groove;
                     border-color: cdb4db;
@@ -104,8 +104,22 @@
                     line-height: 1.6;
                 }
                 
-                .text-academic-history {}
+                #experience {
+                    background-color: hsl(208, 97%, 90%);
+                    padding: 30px;
+                }
                 
-                ul {
-                    display: inline;
+                #container-experience {
+                    display: block;
+                    text-align: center;
+                    /* margin-bottom: 30px; */
+                    border-width: medium;
+                    border-style: groove;
+                    border-color: cdb4db;
+                    text-align: center;
+                    line-height: 1.6;
+                }
+                
+                li {
+                    list-style: square;
                 }
