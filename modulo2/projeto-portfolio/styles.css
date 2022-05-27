@@ -94,13 +94,18 @@
                     padding: 30px;
                 }
                 
-                #h3-acedemic-history {
+                #container-academic {
                     text-align: center;
+                    margin-bottom: 30px;
+                    border-width: medium;
+                    border-style: groove;
+                    border-color: cdb4db;
+                    text-align: center;
+                    line-height: 1.6;
                 }
                 
-                margin-bottom: 30px;
-                border-width: medium;
-                border-style: groove;
-                border-color: cdb4db;
-                text-align: center;
-                line-height: 1.6;
+                .text-academic-history {}
+                
+                ul {
+                    display: inline;
+                }
