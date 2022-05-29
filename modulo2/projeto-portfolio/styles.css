@@ -131,3 +131,37 @@
                     background-color: hsl(208, 97%, 90%);
                     padding: 30px;
                 }
+                
+                .skill-img {
+                    width: 50px;
+                    display: inline;
+                }
+                
+                footer {
+                    text-align: justify;
+                }
+                
+                .fa-linkedin {
+                    background: #0a66c2;
+                    color: white;
+                }
+                
+                .fa-twitter {
+                    background: #1a8cd8;
+                    color: white;
+                }
+                
+                .fa-github {
+                    background: #1f6d2d;
+                    color: white;
+                }
+                
+                .fa {
+                    border-radius: 3px;
+                    text-align: center;
+                    padding: 10px 20px;
+                    font-size: 300px;
+                    width: 45px;
+                    text-decoration: none;
+                    margin: 80px;
+                }
