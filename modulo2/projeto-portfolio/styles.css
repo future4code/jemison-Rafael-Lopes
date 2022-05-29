@@ -84,7 +84,6 @@
                 .about-text {
                     border-width: medium;
                     border-style: groove;
-                    border-color: cdb4db;
                     text-align: center;
                     line-height: 1.6;
                 }
@@ -96,10 +95,8 @@
                 
                 #container-academic {
                     text-align: center;
-                    /* margin-bottom: 30px; */
                     border-width: medium;
                     border-style: groove;
-                    border-color: cdb4db;
                     text-align: center;
                     line-height: 1.6;
                 }
@@ -112,22 +109,25 @@
                 .container {
                     display: block;
                     text-align: center;
-                    /* margin-bottom: 30px; */
                     border-width: medium;
                     border-style: groove;
-                    border-color: cdb4db;
                     line-height: 1.6;
                 }
                 
                 #skill-background {
                     background-color: hsl(208, 97%, 90%);
-                    text-align: center;
                     padding: 30px;
                 }
                 
-                #soft-skills {
-                    list-style: square;
-                    text-align: justify;
-                    display: block;
-                    margin-left: 200px;
+                #skills {
+                    text-align: center;
+                }
+                
+                li {
+                    list-style: none;
+                }
+                
+                #form-background {
+                    background-color: hsl(208, 97%, 90%);
+                    padding: 30px;
                 }
