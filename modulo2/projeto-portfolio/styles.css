@@ -58,18 +58,22 @@
                     margin-left: 400px;
                 }
                 
+                #title-portfolio {
+                    padding-top: 30px;
+                    padding-bottom: 35px;
+                }
+                
                 #portfolio {
                     background-color: rgb(24, 32, 28);
                     color: white;
                     text-align: center;
-                    padding-top: 50px;
                 }
                 
-                tr {
-                    position: relative;
-                    padding-bottom: 50px;
+                .images-portfolio {
                     display: inline;
-                    margin: 30px;
+                    margin-left: 30px;
+                    width: 300px;
+                    padding-bottom: 30px;
                 }
                 
                 #about-title {
@@ -160,8 +164,7 @@
                     border-radius: 3px;
                     text-align: center;
                     padding: 10px 20px;
-                    font-size: 300px;
                     width: 45px;
                     text-decoration: none;
-                    margin: 80px;
+                    margin: 15px;
                 }
