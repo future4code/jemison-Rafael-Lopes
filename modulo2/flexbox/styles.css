@@ -1,0 +1,89 @@
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .cabecalho {
+                display: flex;
+                background: mediumvioletred;
+            }
+            
+            #bolinho {
+                display: flex;
+                margin: 30px 5px;
+                height: 20px;
+            }
+            
+            #titulo {
+                display: flex;
+                flex-direction: row;
+                margin: 20px;
+                text-align: left;
+            }
+            
+            .vertical-menu {
+                width: 200px;
+            }
+            
+            .vertical-menu a {
+                background-color: #f2d0e0;
+                color: black;
+                display: block;
+                padding: 12px;
+                text-decoration: none;
+            }
+            
+            .vertical-menu a:hover {
+                background-color: mediumvioletred;
+            }
+            
+            .bolo-bonito {
+                display: flex;
+            }
+            /* #texto-footer {
+        background: mediumvioletred;
+        text-align: center;
+        padding: 10px;
+    } */
+            /* .principal {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgb(254, 254, 133);
+    height: 500px;
+    width: 60%;
+}
+
+.rodape {
+    background: rgb(205, 133, 0);
+    height: 100px;
+}
+
+.menu {
+    height: 500px;
+    width: 20%;
+    background: rgb(144, 0, 48);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card p {
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+.imagem-card {
+    margin-left: 2px;
+    border: 2px solid violet;
+    width: 150px;
+}
+
+#div-pai {
+    display: flex;
+    flex-direction: row;
+} */
