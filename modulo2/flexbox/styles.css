@@ -5,85 +5,62 @@
             
             .cabecalho {
                 display: flex;
+                align-items: center;
+                justify-content: space-between;
                 background: mediumvioletred;
+                padding: 15px;
             }
             
-            #bolinho {
-                display: flex;
-                margin: 30px 5px;
+            .icones {
                 height: 20px;
+                margin-left: 10px;
             }
             
             #titulo {
                 display: flex;
-                flex-direction: row;
-                margin: 20px;
-                text-align: left;
+                margin-left: 2.1em;
             }
             
             .vertical-menu {
-                width: 200px;
+                display: flex;
+                flex-direction: column;
+                width: 20%;
             }
             
             .vertical-menu a {
+                flex-direction: column;
+                flex-wrap: wrap;
                 background-color: #f2d0e0;
                 color: black;
-                display: block;
-                padding: 12px;
                 text-decoration: none;
+                padding: 10px;
             }
             
             .vertical-menu a:hover {
                 background-color: mediumvioletred;
             }
             
+            button {
+                padding: 0 10px;
+                margin: 0 30px;
+                font-size: 16px;
+            }
+            
             .bolo-bonito {
                 display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: nowrap;
+                width: 250px;
             }
-            /* #texto-footer {
-        background: mediumvioletred;
-        text-align: center;
-        padding: 10px;
-    } */
-            /* .principal {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: rgb(254, 254, 133);
-    height: 500px;
-    width: 60%;
-}
-
-.rodape {
-    background: rgb(205, 133, 0);
-    height: 100px;
-}
-
-.menu {
-    height: 500px;
-    width: 20%;
-    background: rgb(144, 0, 48);
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card p {
-    font-weight: bold;
-    font-size: 20px;
-    color: red;
-}
-
-.imagem-card {
-    margin-left: 2px;
-    border: 2px solid violet;
-    width: 150px;
-}
-
-#div-pai {
-    display: flex;
-    flex-direction: row;
-} */
+            
+            footer {
+                display: block;
+                margin-bottom: 0px;
+            }
+            
+            #texto-footer {
+                background: mediumvioletred;
+                text-align: center;
+                padding: 15px;
+            }
