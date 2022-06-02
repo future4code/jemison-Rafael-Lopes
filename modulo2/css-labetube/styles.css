@@ -7,9 +7,21 @@
     header {
         display: grid;
         grid-template-columns: 90% 10%;
-        justify-items: start;
         padding: 10px;
         background: #ef843a;
+        align-content: start;
+    }
+    
+    .busca {
+        display: grid;
+        justify-content: flex-start;
+        justify-items: start;
+        margin-top: 10px;
+    }
+    
+    .botao {
+        display: grid;
+        place-items: center;
     }
     /* Main content */
     
