@@ -12,18 +12,36 @@
         align-content: start;
     }
     
-    .busca {
+    * {
+        box-sizing: border-box;
+    }
+    /* Barra de busca */
+    
+    form.barra-de-busca input {
         display: grid;
-        justify-content: flex-start;
-        justify-items: start;
-        margin-top: 10px;
+        padding: 10px;
+        font-size: 17px;
+        border: 20px;
+        float: left;
+        width: 60%;
+    }
+    /* Botão submit */
+    
+    form.barra-de-busca button {
+        display: grid;
+        width: 35%;
+        height: 40.5px;
+        background: ac9a83;
+        color: #38444d;
+        font-size: 16px;
+        border: 10px;
+        cursor: pointer;
     }
     
-    .botao {
-        display: grid;
-        place-items: center;
+    form.example button:hover {
+        background: #a33636;
     }
-    /* Main content */
+    /* Conteúdo principal */
     
     body {
         background-color: antiquewhite;
