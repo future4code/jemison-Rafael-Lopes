@@ -1,0 +1,171 @@
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                #dev-front-end {
+                    color: #516c5e;
+                }
+                
+                header {
+                    position: sticky;
+                    top: 0;
+                    background-color: #dbd7ce;
+                    text-align: center;
+                    padding: 20px;
+                }
+                
+                a {
+                    text-decoration: none;
+                    margin: 12px;
+                    font-size: 22px;
+                    color: black;
+                }
+                
+                a:hover {
+                    color: red;
+                    font-size: 24px;
+                }
+                
+                img {
+                    width: 100%;
+                    display: block;
+                    margin: 0 auto;
+                }
+                
+                footer {
+                    background-color: #18201c;
+                    color: white;
+                    padding: 50px;
+                    text-align: center;
+                    /* Position absolute permite trabalhar com as orientações
+    top, bottom, right e left */
+                    position: relative;
+                    width: 100%;
+                    bottom: 0;
+                }
+                
+                #who-am-I {
+                    background-color: hsl(208, 97%, 90%);
+                    font-size: 26px;
+                    text-align: center;
+                    padding: 30px;
+                    border-radius: solid;
+                }
+                
+                #my-name {
+                    text-align: left;
+                    margin-left: 400px;
+                }
+                
+                #title-portfolio {
+                    font-size: 25px;
+                    padding-top: 30px;
+                    padding-bottom: 35px;
+                }
+                
+                #portfolio {
+                    background-color: rgb(24, 32, 28);
+                    color: white;
+                    text-align: center;
+                }
+                
+                .images-portfolio {
+                    display: inline;
+                    margin-left: 30px;
+                    width: 300px;
+                    padding-bottom: 30px;
+                }
+                
+                #about-title {
+                    background-color: hsl(208, 97%, 90%);
+                    padding: 30px;
+                }
+                
+                #h3-about-dev {
+                    text-align: center;
+                }
+                
+                .about-text {
+                    border-width: medium;
+                    border-style: groove;
+                    text-align: center;
+                    line-height: 1.6;
+                }
+                
+                #academic-history {
+                    background-color: hsl(208, 97%, 90%);
+                    padding: 30px;
+                }
+                
+                #container-academic {
+                    text-align: center;
+                    border-width: medium;
+                    border-style: groove;
+                    text-align: center;
+                    line-height: 1.6;
+                }
+                
+                #experience {
+                    background-color: hsl(208, 97%, 90%);
+                    padding: 30px;
+                }
+                
+                .container {
+                    display: block;
+                    text-align: center;
+                    border-width: medium;
+                    border-style: groove;
+                    line-height: 1.6;
+                }
+                
+                #skill-background {
+                    background-color: hsl(208, 97%, 90%);
+                    padding: 30px;
+                }
+                
+                #skills {
+                    text-align: center;
+                }
+                
+                li {
+                    list-style: none;
+                }
+                
+                #form-background {
+                    background-color: hsl(208, 97%, 90%);
+                    padding: 30px;
+                }
+                
+                .skill-img {
+                    width: 50px;
+                    display: inline;
+                }
+                
+                footer {
+                    text-align: justify;
+                }
+                
+                .fa-linkedin {
+                    background: #0a66c2;
+                    color: white;
+                }
+                
+                .fa-twitter {
+                    background: #1a8cd8;
+                    color: white;
+                }
+                
+                .fa-github {
+                    background: #1f6d2d;
+                    color: white;
+                }
+                
+                .fa {
+                    border-radius: 3px;
+                    text-align: center;
+                    padding: 10px 20px;
+                    width: 45px;
+                    text-decoration: none;
+                    margin: 15px;
+                }
