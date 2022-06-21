@@ -8,7 +8,7 @@ function App() {
   }
   return (
     <div className="body">
-      <h1>Olá! Eu sou a Labenu!</h1>
+      <h1>Olá! Me chamo Rafael Lopes!</h1>
       <div className = 'logo'>
         <img src={logoLabenu} alt="logo" />
       </div>
