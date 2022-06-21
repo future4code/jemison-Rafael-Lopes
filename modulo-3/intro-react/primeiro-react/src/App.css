@@ -46,10 +46,10 @@ button {
 
 @media screen and (min-device-width: 320px) and (max-device-width:480px) {
 
-h1 {
-  font-size: 2.2rem;
-  margin-top: 9vh;
-}
+  h1 {
+    font-size: 2.2rem;
+    margin-top: 9vh;
+  }
 
   img {
     width: 23vw;
@@ -59,16 +59,14 @@ h1 {
     float: none;
   }
 
-  p{
+  p {
     font-size: 1.2rem;
   }
+
   button {
     min-width: 200px;
   }
 
-  button:hover {
-    font-size: 1.5rem;
-  }
 
 }
 
