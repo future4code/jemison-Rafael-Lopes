@@ -1,22 +1,22 @@
 import React from 'react';
-import logoLabenu from './img/logo.png';
+import imagemDePerfil from './img/rafael.png';
 import './App.css';
 
 function App() {
   const mandarMensagem = () => {
-    alert('Vamos desenvolver juntos!')
+    alert('Boa noite visitante!')
   }
   return (
     <div className="body">
       <h1>Olá! Me chamo Rafael Lopes!</h1>
-      <div className = 'logo'>
-        <img src={logoLabenu} alt="logo" />
+      <div className='img'>
+        <img src={imagemDePerfil}  alt="Minha imagem de perfil" />
       </div>
       <p>
         Este é o meu primeiro site React.
       </p>
       <div>
-      <button onClick={mandarMensagem}>Aperte este botão</button>
+        <button onClick={mandarMensagem}>Aperte este botão</button>
       </div>
     </div>
   );
