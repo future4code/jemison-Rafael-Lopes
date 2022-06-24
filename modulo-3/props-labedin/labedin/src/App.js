@@ -11,7 +11,8 @@ function App() {
         <CardGrande 
           imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
           nome="Astrodev" 
-          descricao="Oi, eu sou o Rafael Lopes. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+          descricao="Oi, eu sou o Rafael Lopes. 
+          Sou aluno do curso de Desnvolvimento Full Stack da Labenu. Amo assuntos relacionados à tecnologia, música, mercado financeiro e de criptomoedas."
         />
         
         <ImagemButton 
@@ -24,14 +25,14 @@ function App() {
         <h2>Experiências profissionais</h2>
         <CardGrande 
           imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+          nome="Advogado autônomo" 
+          descricao="Especialista em Regime Geral de Previdência" 
         />
         
         <CardGrande 
           imagem="https://logodownload.org/wp-content/uploads/2019/03/nasa-logo-0-768x768.png" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          nome="Vopak" 
+          descricao="Supervisor de turno" 
         />
       </div>
 
