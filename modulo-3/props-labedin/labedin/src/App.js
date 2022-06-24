@@ -3,6 +3,10 @@ import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 import CardPequeno from './components/CardPequeno/CardPequeno';
+import fotoPerfil from './components/CardGrande/imagensCardGrande/fotoPerfil.jpg'
+import justiceWoman from './components/CardGrande/imagensCardGrande/justiceWoman.jpg'
+import laborWorker from './components/CardGrande/imagensCardGrande/laborWorker.jpg'
+
 
 function App() {
   return (
@@ -10,10 +14,10 @@ function App() {
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande
-          imagem="src\components\CardGrande\imagensCardGrande\fotoPerfil.jpg"
-          nome="Sobre mim"
-          descricao="Oi, eu sou o Rafael Lopes. 
-          Sou aluno do curso de Desenvolvimento Full Stack da Labenu. Amo assuntos relacionados à tecnologia, música, mercado financeiro e de criptomoedas."
+       imagem = {fotoPerfil}
+        nome="Sobre mim"
+        descricao="Oi, eu sou o Rafael Lopes.
+        Sou aluno do curso de Desenvolvimento Full Stack da Labenu. Amo assuntos relacionados à tecnologia, música, mercado financeiro e de criptomoedas."
         />
 
         <ImagemButton
@@ -39,13 +43,13 @@ function App() {
       <div className="page-section-container">
         <h2>Experiências profissionais</h2>
         <CardGrande
-          imagem="src\components\CardGrande\imagensCardGrande\euAdvogado.jpg"
+          imagem= {justiceWoman}
           nome="Advogado autônomo"
           descricao="Especialista em Regime Geral de Previdência."
         />
 
         <CardGrande
-          imagem="https://www.freepik.com/free-photo/portrait-construction-worker-standing-rooftops-high-silos-storage-tanks-working-tablet-computer_11036818.htm#query=crude%20oil%20tank&position=16&from_view=search"
+          imagem= {laborWorker}
           nome="Vopak"
           descricao="Atuei como Supervisor de turno."
         />
