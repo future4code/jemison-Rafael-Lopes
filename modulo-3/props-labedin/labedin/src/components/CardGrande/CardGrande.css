@@ -5,16 +5,18 @@
     padding: 20px 10px;
     margin-bottom: 10px;
     height: 200px;
+    font-size: 1.1rem;
 }
 
 .bigcard-container > img {
-    width: 70px;
+    width: 75px;
     margin-right: 10px;
     border-radius: 50%;
 }
 
 .bigcard-container h4 {
     margin-bottom: 15px;
+    font-size: 1.3rem;
 }
 
 .bigcard-container > div {

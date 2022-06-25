@@ -5,10 +5,15 @@
     border-radius: 50px;
     width: 200px;
     padding: 15px 30px;
-    margin: 10px auto; 
+    margin: 10px auto;
+
 }
 
-.image-button-container > img {
-    width: 30px;
+.image-button-container>img {
+    width: 35px;
     margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
 }

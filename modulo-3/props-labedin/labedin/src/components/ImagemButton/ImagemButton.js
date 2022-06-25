@@ -6,8 +6,8 @@ function ImagemButton(props) {
         <div className="image-button-container">
             <img src={props.imagem} />
             <p>{props.texto}</p>
+            
         </div>
-
     )
 }
 

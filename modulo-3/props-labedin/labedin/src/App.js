@@ -6,6 +6,7 @@ import CardPequeno from './components/CardPequeno/CardPequeno';
 import fotoPerfil from './components/CardGrande/imagensCardGrande/fotoPerfil.jpg'
 import justiceWoman from './components/CardGrande/imagensCardGrande/justiceWoman.jpg'
 import laborWorker from './components/CardGrande/imagensCardGrande/laborWorker.jpg'
+import logoLinkedin from './components/CardGrande/imagensCardGrande/linkedin.png'
 
 
 function App() {
@@ -28,14 +29,14 @@ function App() {
 
       <div className="page-section-container">
         <CardPequeno
-          nome="Email:"
+          nome={<span>Email:</span>}
           descricao='rafael@gmail.com'
         />
       </div>
 
       <div className="page-section-container">
         <CardPequeno
-          nome="Endereço:"
+          nome={<span>Endereço:</span>}
           descricao='Rua do sossego s/nº'
         />
       </div>
@@ -57,15 +58,19 @@ function App() {
 
       <div className="page-section-container">
         <h2>Minhas redes sociais</h2>
+        <a href='https://www.linkedin.com/in/rafael-lopes-fullstack-developer/' target='_blanck'>
         <ImagemButton
-          imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png"
-          texto="Facebook"
+         imagem = {logoLinkedin}
+          texto="LinkedIn"
         />
+          </a>
 
+<a href='https://twitter.com/RafaelL77859907' target='_blanck'>
         <ImagemButton
           imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png"
           texto="Twitter"
         />
+        </a>
       </div>
     </div>
   );
