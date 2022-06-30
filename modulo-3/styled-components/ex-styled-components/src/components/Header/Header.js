@@ -1,14 +1,15 @@
 import React from 'react';
-import { TituloPrincipal } from './style'
+import { ContainerPai, TituloPrincipal } from './style'
 
 
 function Header() {
     return (
-        
-        <section>
-            <TituloPrincipal>ZapLab</TituloPrincipal>
-        </section>
-    )
+
+        <ContainerPai>
+            <p>Logo</p>
+            <TituloPrincipal>LabZap/ WhatsLab</TituloPrincipal>
+        </ContainerPai>
+    ) 
 }
 
 export default Header;

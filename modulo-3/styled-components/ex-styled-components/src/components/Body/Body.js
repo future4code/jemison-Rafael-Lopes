@@ -1,13 +1,13 @@
 import React from "react";
-import {DivPai} from './style'
-import {Colunas} from './style'
+import { DivPai } from './style'
+import { Colunas } from './style'
 
 
-function Body(){
+function Body() {
     return (
         <DivPai>
-<Colunas>ColunaEsquerda</Colunas>
-<Colunas>ColunaDireita</Colunas>
+            <Colunas />
+            <Colunas />
         </DivPai>
     )
 }

@@ -5,7 +5,7 @@ import { Rodape } from './style'
 function Footer() {
     return (
         <Rodape>
-            Esse é meu rodapé de página
+            <p>Copyright &copy; 2022 Rafael Lopes All rights reserved. Rua Pais Leme, 215, Conjunto 820 Pinheiros. CEP 05424-150</p>
         </Rodape>
     )
 }
