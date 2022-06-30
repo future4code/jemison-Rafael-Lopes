@@ -1,10 +1,12 @@
 import React from 'react';
+import { Rodape } from './style'
 
-function Footer(){
-    return(
-        <footer>
+
+function Footer() {
+    return (
+        <Rodape>
             Esse é meu rodapé de página
-        </footer>
+        </Rodape>
     )
 }
 

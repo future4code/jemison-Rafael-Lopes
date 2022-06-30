@@ -1,15 +1,15 @@
 import React from 'react';
+import { TituloPrincipal } from './style'
 
 
-
-
-function Header(){
+function Header() {
     return (
+        
         <section>
-            <h1>ZapLab</h1>
-            <p>Meu texto bonitinho!</p>
+            <TituloPrincipal>ZapLab</TituloPrincipal>
         </section>
-    );
+    )
+}
 
-    }
-    export default Header;
+export default Header;
+
