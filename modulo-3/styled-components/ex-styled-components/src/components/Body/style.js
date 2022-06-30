@@ -13,6 +13,12 @@ display:flex;
 background-color: orange;
 height: 90vh;
 width: 10vw;
-overflow: hidden;
 `
+export const Input=styled.section`
+display: flex;
+font-size: 1.2rem;
+margin-top:55vh;
+justify-content: left;
+`
+
 

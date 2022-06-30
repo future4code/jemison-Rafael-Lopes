@@ -1,21 +1,19 @@
 import React from 'react';
-// import logoLabenu from './components/Logo/logoLabenujpg.jpg';
+import logoLabenu from './components/Logo/logoLabenu.jpg';
 import Header from './components/Header/Header'
 import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
-
+import { Imagem } from './components/Header/style';
 
 
 function App() {
 
-
   return (
 
     <div className="ContainerPai">
-      {/* <span>
-        <img src={logoLabenu} alt="Logo da Labenu" />
-      </span> */}
-
+      <Imagem>
+        <img src={logoLabenu} alt="Logo Labenu" />
+      </Imagem>
       <Header />
       <Body />
       <Footer />
