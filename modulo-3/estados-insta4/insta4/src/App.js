@@ -2,34 +2,46 @@ import React from 'react';
 import styled from 'styled-components'
 import Post from './components/Post/Post';
 
-const MainContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`
-function App() {
-return(
-  <MainContainer>
-           <Post
-            nomeUsuario={'paulinha'}
-            fotoUsuario={'https://picsum.photos/50/10'}
-            fotoPost={'https://picsum.photos/200/150'}
-          />
-           <Post
-            nomeUsuario={'rafael'}
-            fotoUsuario={'https://picsum.photos/20/50'}
-            fotoPost={'https://picsum.photos/200/130'}
-          />
-           <Post
-            nomeUsuario={'rodolpho'}
-            fotoUsuario={'https://picsum.photos/30/50'}
-            fotoPost={'https://picsum.photos/190/110'}
-          />
-        </MainContainer>
-)
+// const MainContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: center;
+// `
+class App extends React.Component {
+  state = {
+    usuario: [
+      {
+        nomeUsuario: 'paulinha',
+        fotoUsuario: <img src='https://picsum.photos/50/50' alt=''></img>,
+        fotoPost: <img src='https://picsum.photos/200/150' alt=''></img>
+      },
+      {
+        nomeUsuario: 'rafael',
+        fotoUsuario: <img src='https://picsum.photos/50/40' alt=''></img>,
+        fotoPost: <img src='https://picsum.photos/200/160' alt=''></img>
+      },
+      {
+        nomeUsuario: 'rodolpho',
+        fotoUsuario: <img src='https://picsum.photos/50/30' alt=''></img>,
+        fotoPost: <img src='https://picsum.photos/200/170' alt=''></img>
+      }
+    ]
+  }
+  render() {
+    const listaDeComponentes = this.state.usuario.map((usuario) => {
+      return (
+        <p>
+          {usuario.nomeUsuario}{usuario.fotoUsuario}{usuario.fotoPost}
+        </p>
+      )
+    })
 
+    return (
+      <div>
+        {listaDeComponentes}
+      </div>
+    )
+  }
 }
-
-
 export default App;
