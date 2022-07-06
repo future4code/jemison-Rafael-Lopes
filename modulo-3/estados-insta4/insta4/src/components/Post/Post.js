@@ -49,11 +49,9 @@ function Post(props){
   const onClickCurtida = () => {
     if(numeroCurtidas === 0){
     setnumeroCurtidas(numeroCurtidas + 1)
-    console.log('Curtido!')
 
     } else {
       setnumeroCurtidas(numeroCurtidas - 1)
-      console.log('Descurtido!')
     }
   }
   
