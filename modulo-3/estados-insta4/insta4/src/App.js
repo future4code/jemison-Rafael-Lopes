@@ -13,8 +13,18 @@ return(
   <MainContainer>
            <Post
             nomeUsuario={'paulinha'}
-            fotoUsuario={'https://picsum.photos/50/50'}
+            fotoUsuario={'https://picsum.photos/50/10'}
             fotoPost={'https://picsum.photos/200/150'}
+          />
+           <Post
+            nomeUsuario={'rafael'}
+            fotoUsuario={'https://picsum.photos/20/50'}
+            fotoPost={'https://picsum.photos/200/130'}
+          />
+           <Post
+            nomeUsuario={'rodolpho'}
+            fotoUsuario={'https://picsum.photos/30/50'}
+            fotoPost={'https://picsum.photos/190/110'}
           />
         </MainContainer>
 )
