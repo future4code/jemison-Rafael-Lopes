@@ -10,7 +10,16 @@ const MainContainer = styled.div`
   align-items: center;
   width: 100%;
   margin: 90px auto;
+
+  `
+
+const Formulario = styled.form`
+display: flex;
+flex-direction: column;
+
 `
+
+
 function App() {
 
   return (
@@ -18,8 +27,9 @@ function App() {
       <Post
         nomeUsuario={'paulinha'}
         fotoUsuario={'https://picsum.photos/50/50'}
-        fotoPost={'https://picsum.photos/200/150'} />
-
+        fotoPost={'https://picsum.photos/200/150'}
+ />
+  
       <Post
         nomeUsuario={'rafael'}
         fotoUsuario={'https://picsum.photos/50/40'}
@@ -29,8 +39,20 @@ function App() {
         nomeUsuario={'rodolpho'}
         fotoUsuario={'https://picsum.photos/50/30'}
         fotoPost={'https://picsum.photos/200/170'} />
+
+  <Formulario>
+    <label>Texto</label>
+    <input name='texto' placeholder='Insira sua mensagem'></input>
+    <label>Texto</label>
+    <input name='texto' placeholder='Insira sua mensagem'></input>
+    <label>Texto</label>
+    <input name='texto' placeholder='Insira sua mensagem'></input>
+    <button>Enviar</button>
+  </Formulario>
     </MainContainer>
+
   )
+
 }
 
 
