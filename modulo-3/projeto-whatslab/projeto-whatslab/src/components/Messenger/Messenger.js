@@ -4,19 +4,29 @@ import { useState } from "react";
 function Messenger() {
 
     // Estados
-    const [inputNome, setInputNome] = useState ("");
-    const [inputMensagem, setInputMensagem] = useState ("");
+    const [inputNome, setInputNome] = useState("");
+    const [inputMensagem, setInputMensagem] = useState("");
+    const [usuarios, setUsuarios] = useState([])
 
     // Eventos
-    const handleInputNome = (event) =>{
+    const handleInputNome = (event) => {
         setInputNome(event.target.value)
     }
 
-    const handleInputMensagem = (event) =>{
+    const handleInputMensagem = (event) => {
         setInputMensagem(event.target.value)
     }
 
     // Adicionar Mensagem
+    const enviarMensagem = (event) => {
+        event.preventDEfault();
+    
+        const novoUsuario ={usuario: inputNome, mensagem: inputMensagem}
+        const novaListaDeUsuario = [...usuarios, novoUsuario]
+        setUsuarios(novaListaDeUsuario)
+    }
+
+
     return (
         <section>
             <form>
