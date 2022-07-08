@@ -8,6 +8,15 @@ function Messenger() {
     const [inputMensagem, setInputMensagem] = useState ("");
 
     // Eventos
+    const handleInputNome = (event) =>{
+        setInputNome(event.target.value)
+    }
+
+    const handleInputMensagem = (event) =>{
+        setInputMensagem(event.target.value)
+    }
+
+    // Adicionar Mensagem
     return (
         <section>
             <form>
