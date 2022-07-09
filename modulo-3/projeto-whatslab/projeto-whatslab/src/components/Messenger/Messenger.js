@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { ContainerMessenger } from "./style";
+import { Balao, ContainerMessenger, SubContainer } from "./style";
 
 function Messenger() {
 
     // Estados
     const [inputNome, setInputNome] = useState("");
     const [inputMensagem, setInputMensagem] = useState("");
-    const [mensagem, setMensagem] = useState([""])
+    const [mensagens, setMensagens] = useState([])
+
+
 
     // Eventos
     const handleInputNome = (event) => {
@@ -17,21 +19,36 @@ function Messenger() {
         setInputMensagem(event.target.value)
     }
 
-    // Adicionar Mensagem
-    const enviarMensagem = () => {
+    const enviarMensagem = (event) => {
+        event.preventDefault();
 
-        const novaMensagem = { usuario: inputNome, mensagem: inputMensagem }
-        const novaListaDeMensagens = [...mensagem, novaMensagem]
-        setMensagem(novaListaDeMensagens)
+        setMensagens([...mensagens, { nome: inputNome, mensagem: inputMensagem }])
+        setInputMensagem("")
+        setInputNome("")
     }
 
+    const ListaDeMensagens = mensagens.map((mensagem, index) => {
+        return (
+            
+            <Balao >
+            <div key={index}>
+                <p>{mensagem.nome}</p>
+                <p>{mensagem.mensagem}</p>
+                </div>
+            </Balao>
+        )
+    })
 
     return (
         <ContainerMessenger>
             <form>
+                {enviarMensagem}
+                {ListaDeMensagens}
+                <SubContainer>
                 <input name="usuario" placeholder="Usuário" value={inputNome} onChange={handleInputNome} />
                 <input name="mensagem" placeholder="Escreva uma mensagem" value={inputMensagem} onChange={handleInputMensagem} />
-                <button onClick={enviarMensagem} >Enviar</button>
+                <button onClick={enviarMensagem}>Enviar</button>
+                </SubContainer>
             </form>
         </ContainerMessenger>
     )
