@@ -2,7 +2,10 @@ import React from 'react'
 
 function EtapaFinal() {
   return (
-    <div>EtapaFinal</div>
+    <fieldset>
+      <h1>O Formulário Acabou</h1>
+      <p>Muito obrigado por participar! Entraremos em contato!</p>
+    </fieldset>
   )
 }
 
