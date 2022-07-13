@@ -7,25 +7,22 @@ import { BotaoAvancar } from "./components/style";
 
 class App extends React.Component {
   state = {
-    etapa: 0
+    etapa: 1
   }
 
   renderizaEtapa = () => {
     switch (this.state.etapa) {
-      case 0:
+      case 1:
         return <Etapa1 />;
         break;
-      case 1:
+      case 2:
         return <SegundaEtapa />;
         break;
-      case 2:
+      case 3:
         return <TerceiraEtapa />;
         break;
-      case 3:
-        return <EtapaFinal />;
-        break;
       case 4:
-        return <Etapa1 />
+        return <EtapaFinal />;
         break;
       default:
         break;
@@ -33,7 +30,7 @@ class App extends React.Component {
   };
 
 
-  add = () => {
+  irParaProximaEtapa = () => {
     this.setState({ etapa: this.state.etapa + 1 })
   }
   render() {
@@ -41,7 +38,7 @@ class App extends React.Component {
       <>
         {this.renderizaEtapa()}
         {this.state.etapa !== 4 && (
-          <BotaoAvancar onClick={this.add}>Próxima etapa</BotaoAvancar>
+          <BotaoAvancar onClick={this.irParaProximaEtapa}>Próxima etapa</BotaoAvancar>
         )}
       </>
     )
