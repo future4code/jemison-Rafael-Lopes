@@ -19,7 +19,8 @@ class App extends React.Component {
         return <TerceiraEtapa />;
       case 4:
         return <EtapaFinal />;
-      default:
+        break;
+      default: 
         break;
     }
   }
