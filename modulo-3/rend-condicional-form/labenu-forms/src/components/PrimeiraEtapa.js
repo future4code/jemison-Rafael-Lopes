@@ -7,9 +7,9 @@ function Etapa1() {
     <Container>
       <Cabecalho>
         <h1>Dados Gerais</h1>
+        <Texto>Preencha os dados solicitados abaixo.</Texto>
       </Cabecalho>
       <Formulario>
-        <Texto>Preencha os dados solicitados abaixo.</Texto>
         <label for='nome'>1. Qual o seu nome?</label>
         <input name='nome' type='text' required />
         <label for='idade'>2. Qual sua idade?</label>

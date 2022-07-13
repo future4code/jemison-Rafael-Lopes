@@ -1,10 +1,14 @@
 import React from 'react'
+import { Cabecalho, Container, Formulario } from './style'
 
 function TerceiraEtapa() {
   return (
-    <fieldset>
+    
+    <Container>
+    <Cabecalho>
       <h1>Informações Gerais de Ensino</h1>
-      <form>
+      </Cabecalho>
+      <Formulario>
         <label form='informacoes-de-ensino'>5. Por que você não terminou um curso de graduação</label>
         <input name='informacoes-de-ensino' type='text' required />
         <label>6. Você fez algum curso complementar?</label>
@@ -14,8 +18,8 @@ function TerceiraEtapa() {
           <option value='2'>Curso de Inglês</option>
           <option value='3'>Não fiz curso complementar</option>
         </select>
-      </form>
-    </fieldset>
+      </Formulario>
+    </Container>
   )
 }
 
