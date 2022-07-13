@@ -41,6 +41,6 @@ margin: 0;
 export const BotaoAvancar = styled.button`
 display: flex;
 margin: 0 auto;
-width: 13vw;
+width: 15vw;
 justify-content: center;
 `

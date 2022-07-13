@@ -1,5 +1,5 @@
 import React from 'react'
-import { Agradecimentos, Cabecalho, Container, Texto } from './style'
+import { Agradecimentos, Cabecalho, Container } from './style'
 
 function EtapaFinal() {
   return (
