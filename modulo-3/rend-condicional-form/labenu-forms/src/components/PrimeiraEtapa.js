@@ -1,12 +1,15 @@
 import React from 'react'
+import { Cabecalho, Container, Formulario, Texto } from './style'
 
 function Etapa1() {
   return (
 
-    <fieldset>
-      <h1>Dados Gerais</h1>
-      <p>Preencha os dados solicitados abaixo.</p>
-      <form>
+    <Container>
+      <Cabecalho>
+        <h1>Dados Gerais</h1>
+      </Cabecalho>
+      <Formulario>
+        <Texto>Preencha os dados solicitados abaixo.</Texto>
         <label for='nome'>1. Qual o seu nome?</label>
         <input name='nome' type='text' required />
         <label for='idade'>2. Qual sua idade?</label>
@@ -22,9 +25,8 @@ function Etapa1() {
             <option>Ensino Médio Completo</option>
           </select>
         </section>
-
-      </form>
-    </fieldset>
+      </Formulario>
+    </Container>
 
   )
 }
