@@ -1,6 +1,11 @@
+import axios from 'axios';
 import React from 'react'
 
 function ListaDeUsuarios(props) {
+    const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users';
+    getAllUsers = ()=>{
+        axios.get(url)
+    }
     const { handleCadastro } = props;
 
     return (
