@@ -1,12 +1,12 @@
 import React from 'react'
 
 function CadastroUsuario(props) {
-    const {handleLista} = props;
+    const {handleCadastro} = props;
 
     return (
         <div>
-            <h1>Cadastro de Usuário (Login)</h1>
-            <button onClick={handleLista}>Trocar tela</button>
+            <h1>Cadastro de Usuário</h1>
+            <button onClick={handleCadastro}>Trocar tela</button>
         </div>
     )
 }
