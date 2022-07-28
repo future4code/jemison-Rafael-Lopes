@@ -1,11 +1,14 @@
 import React from 'react'
 
-function ListaDeUsuarios() {
-  return (
-    <div>
-        <h1>Lista de Usuários</h1>
-    </div>
-  )
+function ListaDeUsuarios(props) {
+    const { handleCadastro } = props;
+
+    return (
+        <div>
+            <h1>Lista de Usuários</h1>
+            <button onClick={handleCadastro}>Trocar tela</button>
+        </div>
+    )
 }
 
-export default ListaDeUsuarios
+export default ListaDeUsuarios;

@@ -2,10 +2,10 @@ import React from 'react'
 
 function Seletor() {
   return (
-    <div>
+   <section>
     
-    </div>
+   </section>
   )
 }
 
-export default Seletor
+export default Seletor;

@@ -1,11 +1,14 @@
 import React from 'react'
 
-function CadastroUsuario() {
-  return (
-    <div>
-        <h1>Cadastro de Usuário</h1>
-    </div>
-  )
+function CadastroUsuario(props) {
+    const {handleLista} = props;
+
+    return (
+        <div>
+            <h1>Cadastro de Usuário (Login)</h1>
+            <button onClick={handleLista}>Trocar tela</button>
+        </div>
+    )
 }
 
-export default CadastroUsuario
+export default CadastroUsuario;
