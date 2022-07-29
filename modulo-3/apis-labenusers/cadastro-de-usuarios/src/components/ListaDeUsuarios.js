@@ -7,11 +7,19 @@ function ListaDeUsuarios(props) {
     // Estado inicial
     const [listaDeUsuarios, setListaDeUsuarios] = useState([]);
 
+    const deletarUsuario =(id)=>{
+        axios.delete('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:id')
+        setListaDeUsuarios(listaDeUsuarios.filter(usuario=>usuario._id !==id))
+    }
+
     // Componetização da lista
     const todosUsuarios = listaDeUsuarios.map((usuario, index) => {
         return (
             <div key={index}>
-                {usuario.name}
+                <li>
+                    {usuario.name}
+                    <button onClick={()=>deletarUsuario(usuario._id)}>x</button>
+                </li>
             </div>
         )
     });
@@ -39,9 +47,9 @@ function ListaDeUsuarios(props) {
     return (
         <div>
             <h1>Lista de Usuários</h1>
-            <ul>
-            {todosUsuarios}
-            </ul>
+            <ol>
+                {todosUsuarios}
+            </ol>
             <button onClick={handleCadastro}>Voltar</button>
         </div>
     )

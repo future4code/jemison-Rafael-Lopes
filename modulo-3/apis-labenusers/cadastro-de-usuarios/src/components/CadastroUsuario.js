@@ -46,9 +46,9 @@ function CadastroUsuario(props) {
             .catch((error) => {
                 alert("Algo deu errado. Tente novamente!")
             })
+            inputNome("")
+        }
 
-    }
-console.log(postUsuario)
     return (
         <div>
             <header>
@@ -68,7 +68,7 @@ console.log(postUsuario)
                         onChange={handleInputEmail}
                         placeholder="Email"
                     />
-                    <button onClick={()=>postUsuario}>Adicionar</button>
+                    <button onClick={() => postUsuario}>Adicionar</button>
                 </form>
             </main>
             <div>
