@@ -1,8 +1,25 @@
 import axios from 'axios';
 import React from 'react'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function ListaDeUsuarios(props) {
+    const { handleCadastro } = props;
+    // Estado inicial
+    const [listaDeUsuarios, setListaDeUsuarios] = useState([]);
+
+    // Componetização da lista
+    const todosUsuarios = listaDeUsuarios.map((usuario, index) => {
+        return (
+            <div key={index}>
+                {usuario.name}
+            </div>
+        )
+    });
+
+    // Buscando dados automaticamente utilizando o método de ciclo de vida(lifecycle)
+    useEffect(() => {
+        getAllUsers()
+    }, [])
 
     // Variáveis da API
     const url = 'https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users';
@@ -12,25 +29,19 @@ function ListaDeUsuarios(props) {
         }
     };
     // Requisição GET
-    getAllUsers = () => {
+    const getAllUsers = () => {
         axios.get(url, serviceHeaders)
-            .then((response) => {
-                alert('Usuário cadastrado com sucesso!')
-                getAllUsers()
-            }).catch((error) => {
-                alert('Algo errado. Tente novamente!')
-            })
+            .then((response) => { setListaDeUsuarios(response.data) })
+            .catch((error) => { console.log(error.response) })
     }
 
-    // Buscando dados automaticamente utilizando o método de ciclo de vida(lifecycle)
-    useEffect(() => {
-        getAllUsers()
-    }, [])
-    const { handleCadastro } = props;
 
     return (
         <div>
             <h1>Lista de Usuários</h1>
+            <ul>
+            {todosUsuarios}
+            </ul>
             <button onClick={handleCadastro}>Voltar</button>
         </div>
     )
