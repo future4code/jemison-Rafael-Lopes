@@ -16,7 +16,7 @@ function App() {
         Este é o meu primeiro site React.
       </p>
       <div>
-        <button onClick={mandarMensagem}>Aperte</button>
+        <button onClick={mandarMensagem}>Aperte este botão</button>
       </div>
     </div>
   );
