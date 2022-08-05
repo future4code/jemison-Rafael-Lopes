@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Main from "./components/Main/Main";
-import MatchPage from "./components/MatchPage/MatchPage";
+import MatcheList from "./components/MatchList/MatchList";
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
       case "start":
         return <Main changeScreen={changeScreen} />
       case "list":
-        return <MatchPage changeScreen={changeScreen} />
+        return <MatcheList changeScreen={changeScreen} />
       default:
         return null;
     }

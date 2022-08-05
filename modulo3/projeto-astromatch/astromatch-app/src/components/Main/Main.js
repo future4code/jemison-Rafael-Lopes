@@ -7,7 +7,7 @@ function Main(props) {
 
   return (
     <div>
-    <button onClick={()=> props.switchScreen("list")} >Match page</button>
+    <button onClick={()=> props.switchScreen("list")} >Matchlist</button>
       <h2>Main (cards)</h2>
       <button>Discard</button>
       <button>Clear</button>
