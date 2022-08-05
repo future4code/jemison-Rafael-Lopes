@@ -2,7 +2,11 @@ import React from 'react'
 
 function MatchPage() {
   return (
-    <div>MatchPage</div>
+    <div>
+   <button>Retornar</button>
+    <h1>Astromatch</h1>
+    </div>
+ 
   )
 }
 
