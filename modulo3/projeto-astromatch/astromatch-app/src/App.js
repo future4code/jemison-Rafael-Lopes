@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import Main from "./components/Main/Main";
-import MatcheList from "./components/MatchList/MatchList";
+import MatchList from "./components/MatchList/MatchList";
 
 function App() {
 
-  const [screen, setScreen] = useState("start")
+  const [screen, setScreen] = useState("mainScreen")
 
   const changeScreen = (screen) => {
     setScreen(screen)
   }
 
-  const switchScreen = () => {
+  const selectScreen = () => {
     switch (screen) {
-      case "start":
+      case "mainScreen":
         return <Main changeScreen={changeScreen} />
-      case "list":
-        return <MatcheList changeScreen={changeScreen} />
+      case "matchList":
+        return <MatchList changeScreen={changeScreen} />
       default:
         return null;
     }
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div>
-      {switchScreen()}
+      {selectScreen()}
     </div>
   );
 }
