@@ -27,7 +27,7 @@ function Main(props) {
       'Content-Type': 'application/json'
     }
   }
-  const pickProfile = (() => {
+  const choosePerson = (() => {
     axios.post(
       "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person", headers, {
       body: {
@@ -44,6 +44,7 @@ function Main(props) {
   })
   
 
+
   return (
     <div>
       <button onClick={() => props.changeScreen("matchList")} >Matchlist</button>
@@ -57,7 +58,7 @@ function Main(props) {
 
       <button>Excluir</button>
       <button>Resetar</button>
-      <button onClick={() => pickProfile(true)}>Match</button>
+      <button onClick={() => choosePerson(true)}>Match</button>
     </div>
 
   )
