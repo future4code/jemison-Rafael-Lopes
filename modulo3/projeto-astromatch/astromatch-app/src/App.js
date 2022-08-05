@@ -1,31 +1,29 @@
 import React, { useState } from "react";
-import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import MatchPage from "./components/MatchPage/MatchPage";
 
 function App() {
 
-  const [screen, setScreen] = useState("mainScreen")
+  const [screen, setScreen] = useState("start")
 
-  const mainScreen= (screen)=> {
-   setScreen(screen)
+  const changeScreen = (screen) => {
+    setScreen(screen)
   }
 
-  const switchScreen = ()=>{
-    switch(screen){
-      case "mainScreen":
-        return<Main mainScreen={mainScreen} />
-        case "matchList":
-          return <MatchPage mainScreen={mainScreen} />
-          default:
-            return null;
+  const switchScreen = () => {
+    switch (screen) {
+      case "start":
+        return <Main changeScreen={changeScreen} />
+      case "list":
+        return <MatchPage changeScreen={changeScreen} />
+      default:
+        return null;
     }
-  } 
+  }
 
   return (
     <div>
-    <Header/>
-    {switchScreen()}
+      {switchScreen()}
     </div>
   );
 }

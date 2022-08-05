@@ -1,9 +1,8 @@
 import React from 'react'
 
-function MatchPage() {
+function MatchPage(props) {
   return (
     <div>
-   <button>Retornar</button>
     <h1>Astromatch</h1>
     </div>
  

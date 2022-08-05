@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 
 function Main(props) {
 
-  const [perfis, setPerfis] = useState()
+ 
 
   return (
     <div>
+    <button onClick={()=> props.switchScreen("list")} >Match page</button>
       <h2>Main (cards)</h2>
       <button>Discard</button>
       <button>Clear</button>
