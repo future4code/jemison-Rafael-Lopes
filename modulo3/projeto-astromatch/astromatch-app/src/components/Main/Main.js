@@ -14,7 +14,6 @@ function Main(props) {
       })
       .catch((error) => {
         console.log(error.message)
-        // Mudar linha acima para um atert de erro
       })
   }
 
@@ -22,20 +21,43 @@ function Main(props) {
     getProfileToChoose()
   }, [])
 
+  const headers = {
+    headers: {
+      Authorization: "rafael-lopes-jemison",
+      'Content-Type': 'application/json'
+    }
+  }
+  const pickProfile = (() => {
+    axios.post(
+      "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/choose-person", headers, {
+      body: {
+        id: "",
+        choice: true,
+      },
+    })
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((error) => {
+      console.log(error.message)
+    })
+  })
+  
+
   return (
     <div>
       <button onClick={() => props.changeScreen("matchList")} >Matchlist</button>
-      <h2>Main (cards)</h2>
+      <h2>Main</h2>
       <ImgProfile src={profile.photo} alt="" />
       <section>
-        <h2>{profile.name}</h2>
+        <h2>{profile.name}:</h2>
         <h3>{profile.age} anos</h3>
         <p>{profile.bio}</p>
       </section>
 
-      <button>Discard</button>
-      <button>Clear all</button>
-      <button>Match</button>
+      <button>Excluir</button>
+      <button>Resetar</button>
+      <button onClick={() => pickProfile(true)}>Match</button>
     </div>
 
   )

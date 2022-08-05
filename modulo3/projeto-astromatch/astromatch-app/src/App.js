@@ -17,7 +17,7 @@ function App() {
       case "matchList":
         return <MatchList changeScreen={changeScreen} />
       default:
-        return null;
+        return <p>Algo deu errado!</p>;
     }
   }
 
