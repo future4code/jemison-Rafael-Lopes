@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Main from "./components/Main/Main";
 import MatchPage from "./components/MatchPage/MatchPage";
 

@@ -1,6 +1,10 @@
 import React from 'react'
 
-function Main() {
+
+function Main(props) {
+
+  
+
   return (
     <div>Main</div>
   )
