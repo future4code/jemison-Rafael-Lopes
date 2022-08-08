@@ -4,8 +4,8 @@ import { ImgProfile } from './styles'
 
 function Main(props) {
 
-
   const [profile, setProfile] = useState({})
+
 
   const getProfileToChoose = () => {
     axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/person")
@@ -13,7 +13,7 @@ function Main(props) {
         setProfile(response.data.profile)
       })
       .catch((error) => {
-        console.log(error.message)
+        console.log(JSON.stringify(error))
       })
   }
 
@@ -39,7 +39,7 @@ function Main(props) {
       console.log(response)
     })
     .catch((error) => {
-      console.log(error.message)
+      console.log(JSON.stringify(error))
     })
   })
   
