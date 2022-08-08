@@ -1,24 +1,24 @@
+import React from 'react';
+import imagemDePerfil from './img/rafael.jpg';
 import './App.css';
 
 function App() {
+  const mandarMensagem = () => {
+    alert('Boa noite visitante!')
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <h1>Olá! Me chamo Rafael Lopes!</h1>
+      <div className='img'>
+        <img src={imagemDePerfil}  alt="Minha imagem de perfil" />
+      </div>
+      <p>
+        Este é o meu primeiro site React.
+      </p>
+      <div>
+        <button onClick={mandarMensagem}>Aperte este botão</button>
+      </div>
     </div>
   );
 }
-
 export default App;
