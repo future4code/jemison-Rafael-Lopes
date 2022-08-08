@@ -2,50 +2,75 @@ import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
 import ImagemButton from './components/ImagemButton/ImagemButton';
+import CardPequeno from './components/CardPequeno/CardPequeno';
+import fotoPerfil from './components/imagensCardGrande/fotoPerfil.png'
+import justiceWoman from './components/imagensCardGrande/justiceWoman.jpg'
+import laborWorker from './components/imagensCardGrande/laborWorker.jpg'
+import logoLinkedin from './components/imagensCardGrande/linkedin.png'
+
 
 function App() {
   return (
     <div className="App">
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
-        <CardGrande 
-          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
-          nome="Astrodev" 
-          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
+        <CardGrande
+       imagem = {fotoPerfil}
+        nome="Sobre mim"
+        descricao="Oi, eu sou o Rafael Lopes.
+        Sou aluno do curso de Desenvolvimento Full Stack da Labenu. Amo assuntos relacionados à tecnologia, música, mercado financeiro e de criptomoedas."
         />
-        
-        <ImagemButton 
-          imagem="https://cdn-icons-png.flaticon.com/512/271/271210.png" 
+
+        <ImagemButton
+          imagem="https://cdn-icons-png.flaticon.com/512/271/271210.png"
           texto="Ver mais"
         />
       </div>
 
       <div className="page-section-container">
-        <h2>Experiências profissionais</h2>
-        <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Labenu" 
-          descricao="Formando desenvolvedores para o mercado de trabalho!" 
+        <CardPequeno
+          nome={<span>Email:</span>}
+          descricao='rafael@gmail.com'
         />
-        
-        <CardGrande 
-          imagem="https://logodownload.org/wp-content/uploads/2019/03/nasa-logo-0-768x768.png" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+      </div>
+
+      <div className="page-section-container">
+        <CardPequeno
+          nome={<span>Endereço:</span>}
+          descricao='Rua do sossego s/nº'
+        />
+      </div>
+
+      <div className="page-section-container">
+        <h2>Experiências profissionais</h2>
+        <CardGrande
+          imagem= {justiceWoman}
+          nome="Advogado autônomo"
+          descricao="Especialista em Regime Geral de Previdência."
+        />
+
+        <CardGrande
+          imagem= {laborWorker}
+          nome="Vopak"
+          descricao="Atuei como Supervisor de turno."
         />
       </div>
 
       <div className="page-section-container">
         <h2>Minhas redes sociais</h2>
-        <ImagemButton 
-          imagem="https://d2v9ipibika81v.cloudfront.net/uploads/sites/261/2017/01/facebook-logo-3.png" 
-          texto="Facebook" 
-        />        
+        <a href='https://www.linkedin.com/in/rafael-lopes-fullstack-developer/' target='_blanck' alt='Logo LinkidIn'>
+        <ImagemButton
+         imagem = {logoLinkedin}
+          texto="LinkedIn"
+        />
+          </a>
 
-        <ImagemButton 
-          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png" 
-          texto="Twitter" 
-        />        
+<a href='https://twitter.com/RafaelL77859907' target='_blanck'>
+        <ImagemButton
+          imagem="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-1-1.png"
+          texto="Twitter"
+        />
+        </a>
       </div>
     </div>
   );
