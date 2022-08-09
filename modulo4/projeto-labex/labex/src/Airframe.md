@@ -10,4 +10,6 @@ Aqui o usuário encontra-rá a lista de planetas disponíveis para viagens e um 
 
 ![](2022-08-09-19-35-58.png)<hr>
 
-### **3. Lista de viagens**
+### **3. Formulário de inscrição**
+Esse é o formulário de preenchimento obrigatório para se candidatar às viagens interplanetárias.
+![](2022-08-09-20-03-10.png)
