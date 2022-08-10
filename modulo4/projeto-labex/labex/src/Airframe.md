@@ -16,4 +16,8 @@ Esse é o formulário de preenchimento obrigatório para se candidatar às viage
 
 ### **4. Área administrativa**
 Painel administrativo em que será realizada as criação das viagens.
-![](2022-08-09-21-51-16.png)
+![](2022-08-09-21-51-16.png)<hr>
+
+### **5. Área administrativa**
+Página que conterá a lista de viagens criadas com opção de editar ou deletar viagem.
+![](2022-08-09-21-55-51.png)
