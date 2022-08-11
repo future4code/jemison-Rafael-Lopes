@@ -6,11 +6,11 @@ function HomePage() {
   const navigate = useNavigate();
 
   const goToListTripsPage = () => {
-    navigate('listTripsPage')
+    navigate('/listTripsPage')
   }
 
-  const goToAdminHomePage = () =>{
-    navigate('adminHomePage')
+  const goToAdminHomePage = () => {
+    navigate('/adminHomePage')
   }
   return (
     <section>
