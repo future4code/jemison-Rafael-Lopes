@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage'
 import ListTripsPage from './Pages/ListTripsPage';
 import LoginPage from './Pages/LoginPage';
 import AdminHomePage from './Pages/AdminHomePage'
+import CreateTripPage from './Pages/CreateTripPage';
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
         <Route path='/loginPage' element={<LoginPage />} />
         <Route path='/aplicationFormPage' element={<AplicationFormPage />} />
         <Route path='/adminHomePage' element={<AdminHomePage />} />
+        <Route path='/createTrip' element={<CreateTripPage />} />
       </Routes>
     </BrowserRouter>
   )
