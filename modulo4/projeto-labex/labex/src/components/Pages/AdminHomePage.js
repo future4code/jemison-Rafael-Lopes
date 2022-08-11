@@ -22,7 +22,7 @@ function AdminHomePage() {
       <h1>AdminHomePage</h1>
       <h2>Painel Administrativo</h2>
       <button onClick={goToLastPage} >Voltar</button>
-      <button onClick={} >Criar Viagem</button>
+      <button onClick={goToCreateTripPage} >Criar Viagem</button>
       <button onClick={goToLoginPage}>Sair</button>
     </div>
   )
