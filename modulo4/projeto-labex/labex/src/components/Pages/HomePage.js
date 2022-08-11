@@ -10,7 +10,7 @@ function HomePage() {
   }
 
   const goToLoginPage = () => {
-    navigate('/loginPage')
+    navigate('/login')
   }
   return (
     <section>

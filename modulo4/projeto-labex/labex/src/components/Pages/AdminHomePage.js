@@ -9,12 +9,12 @@ function AdminHomePage() {
     navigate(-1)
   }
 
-  const goToCreateTripPage = () =>{
+  const goToCreateTripPage = () => {
     navigate('/createTrip')
   }
 
   const goToLoginPage = () => {
-    navigate('/loginPage')
+    navigate('/login')
   }
 
   return (
