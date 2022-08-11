@@ -9,15 +9,15 @@ function HomePage() {
     navigate('/listTripsPage')
   }
 
-  const goToAdminHomePage = () => {
-    navigate('/adminHomePage')
+  const goToLoginPage = () => {
+    navigate('/loginPage')
   }
   return (
     <section>
       <h1>HomePage</h1>
       <h1>Labex</h1>
       <button onClick={goToListTripsPage} >Ver Viagens</button>
-      <button onClick={goToAdminHomePage} >Área Admin</button>
+      <button onClick={goToLoginPage} >Área Admin</button>
     </section>
   )
 }
