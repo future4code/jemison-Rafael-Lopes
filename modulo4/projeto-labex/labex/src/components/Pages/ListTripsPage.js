@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
+
 function ListTripsPage() {
+
 
   const navigate = useNavigate();
 
@@ -13,6 +16,7 @@ function ListTripsPage() {
     navigate('/aplicationFormPage')
   }
 
+  
 
   return (
     <div>
@@ -20,6 +24,7 @@ function ListTripsPage() {
       <h2>Lista de viagens</h2>
       <button onClick={goToHome} >Voltar</button>
       <button onClick={goToAplicationFormPage} >Inscrever-se</button>
+     
     </div>
   )
 }

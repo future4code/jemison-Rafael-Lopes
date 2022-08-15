@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function UseRequestData(url) {
+function useRequestData(url) {
 
     const [data, setData] = useState(undefined)
     const [isLoading, setIsLoading] = useState(false)
@@ -25,4 +25,4 @@ function UseRequestData(url) {
 
 }
 
-export default UseRequestData;
+export default useRequestData;
