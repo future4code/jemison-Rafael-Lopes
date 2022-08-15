@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import {IconeComContador} from '../IconeComContador/IconeComContador'
+import { IconeComContador } from '../IconeComContador/IconeComContador'
 
 import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
-import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
+import { SecaoComentario } from '../SecaoComentario/SecaoComentario'
 
 const PostContainer = styled.div`
   border: 1px solid gray;
@@ -40,64 +40,62 @@ const PostPhoto = styled.img`
   width: 100%;
 `
 
-function Post(props){
-  const [state, setState] = useState({
-    curtido: false,
-    numeroCurtidas: 0,
-    comentando: false,
-    numeroComentarios: 0
-  })
+function Post(props) {
 
-  const [numeroCurtidas, setnumeroCurtidas] = useState (0)
-  const [curtido, setCurtido] = useState(false)
+  const [numeroCurtidas, setnumeroCurtidas] = useState(0)
   const [comentando, setComentando] = useState(false)
   const [numeroComentarios, setNumeroComentarios] = useState(0)
 
   const onClickCurtida = () => {
-    console.log('Curtiu!')
+
+    if (numeroCurtidas === 0) {
+      setnumeroCurtidas(numeroCurtidas + 1);
+    } else {
+      setnumeroCurtidas(numeroCurtidas - 1);
+    }
   }
-  
+
   const onClickComentario = () => {
     setComentando(!comentando)
-    if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+    if (comentando) {
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} />
     }
     console.log(comentando)
   }
-  
+
+  let iconeCurtida
+
+  if (numeroCurtidas === 1) {
+    iconeCurtida = iconeCoracaoPreto
+  } else {
+    iconeCurtida = iconeCoracaoBranco
+  }
+
   const aoEnviarComentario = () => {
     setComentando(false)
     setNumeroComentarios(numeroComentarios + 1)
   }
 
-  let iconeCurtida
+  let componenteComentario
 
-    if(curtido) {
-      iconeCurtida = iconeCoracaoPreto
-    } else {
-      iconeCurtida = iconeCoracaoBranco
-    }
+  if (comentando) {
+    componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} />
+  }
 
-    let componenteComentario
-
-    if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
-    }
-
-  return(
+  return (
     <PostContainer>
       <PostHeader>
-        <UserPhoto src={props.fotoUsuario} alt={'Imagem do usuario'}/>
+        <UserPhoto src={props.fotoUsuario} alt={'Imagem do usuario'} />
         <p>{props.nomeUsuario}</p>
       </PostHeader>
 
-      <PostPhoto src={props.fotoPost} alt={'Imagem do post'}/>
+      <PostPhoto src={props.fotoPost} alt={'Imagem do post'} />
 
       <PostFooter>
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
-          valorContador={state.numeroCurtidas}
+          valorContador={numeroCurtidas}
         />
 
         <IconeComContador
@@ -112,4 +110,4 @@ function Post(props){
 }
 
 
-export default Post
+export default Post;
