@@ -1,30 +1,23 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
+import useRequestData from '../Hooks/UseRequestData';
+import { BASE_URL } from '../constants/constants';
 
 function ListTripsPage() {
 
-  const url="https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/populate"
+  const [tripsList, isLoadingList, errorList] = useRequestData(`${BASE_URL}trips`)
 
-  const body = {
-    "aluno": "darvas"
-}
-
-const postPopulate = (e) => {
-    e.preventDefault();
-
-    axios.post(url, body)
-    .then((response) => {
-        alert("Playlist cadastrada com sucesso!")
-        // getAllPlaylists()
-    }).catch((error) => {
-        alert("Tente novamente :(")
-    })
-
-    // setInput("")
-}
-
+  const updatedList = tripsList && tripsList.trips.map((trip, index) => {
+    return (
+      <section key={index}>
+        <h2>{trip.name}</h2>
+        <p>{trip.description}</p>
+        <p>{trip.planet}</p>
+        <p>{trip.durationInDays}</p>
+        <p>{trip.date}</p>
+      </section>
+    )
+  })
 
   const navigate = useNavigate();
 
@@ -36,7 +29,7 @@ const postPopulate = (e) => {
     navigate('/trips/application')
   }
 
-  
+
 
   return (
     <div>
@@ -44,7 +37,11 @@ const postPopulate = (e) => {
       <h2>Lista de viagens</h2>
       <button onClick={goToHome} >Voltar</button>
       <button onClick={goToAplicationFormPage} >Inscrever-se</button>
-     <button  >Ver Viagens</button>
+
+      {isLoadingList && <p>Carregando lista de viagens</p>}
+      {!isLoadingList && errorList && <p>Ocorreu um erro com o carregamento da lista de viagens.</p>}
+      {!isLoadingList && tripsList && tripsList.trips.length > 0 && updatedList}
+      {!isLoadingList && tripsList && tripsList.trips.length === 0 && (<p>Não há viagens para mostrar.</p>)}
     </div>
   )
 }
