@@ -8,25 +8,25 @@ function AplicationFormPage() {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
   const [textAreaApplication, setTextAreaApplication] = useState('')
-  const [occupation, setProfession] = useState('')
+  const [occupation, setOccupation] = useState('')
 
-  const onChangeName = (ev) => {
-    setName(ev.target.value);
+  const onChangeName = (event) => {
+    setName(event.target.value);
   }
 
-  const onChangeAge = (ev) => {
-    setAge(ev.target.value)
+  const onChangeAge = (event) => {
+    setAge(event.target.value)
   }
 
-  const onChangeTextApplication = (ev) => {
-    setTextAreaApplication(ev.target.value)
+  const onChangeTextApplication = (event) => {
+    setTextAreaApplication(event.target.value)
   }
 
-  const onChangeprofession = (ev) => {
-    setProfession(ev.target.value)
+  const onChangeprofession = (event) => {
+    setOccupation(event.target.value)
   }
 
-  const enviarFormulario = (e) => {
+  const sendApplication = (e) => {
     e.preventDefault()
 
     const body = {
@@ -39,8 +39,9 @@ function AplicationFormPage() {
 
     axios
       .post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/rafael-lopes-jemison/trips/${ListTripsPage.id}/apply`, body)
-      .then(res => console.log(res.data.id))
-      .catch(err => console.log(err.response))
+      .then((response) =>
+        console.log(response.data.id))
+      .catch(error => console.log(error.response))
   }
   const navigate = useNavigate();
 
@@ -52,10 +53,7 @@ function AplicationFormPage() {
     <div>
       <h1>AplicationFormPage</h1>
       <h2>Inscrever-se para uma viagem</h2>
-      <form onSubmit={enviarFormulario}>
-
-
-        <h2><strong>Candidate-se a uma viagem espacial:</strong></h2>
+      <form>
         <label htmlFor={"travel"}>
           Escolha uma viagem
         </label>
@@ -366,7 +364,7 @@ function AplicationFormPage() {
         </select>
         <br />
         <button onClick={goToListTripsPage} >Voltar</button>
-        <button>Enviar</button>
+        <button onClick={sendApplication} >Enviar</button>
 
       </form>
 
