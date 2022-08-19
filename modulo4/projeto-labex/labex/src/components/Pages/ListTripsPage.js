@@ -1,23 +1,31 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 function ListTripsPage() {
 
-  const [trips, setTrips] = useState(null)
+  const url="https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/populate"
 
-  const listTrips = trips.map((trip)=>{
-    return(
-      <section>
-  <h2>{trip.name}, {trip.planet}</h2>
-      <p>Duração: {trip.durationInDays}</p>
-      <p>Descrição: {trip.description}</p>
-      </section>
-    
-    )
-  })
+  const body = {
+    "aluno": "darvas"
+}
 
-  
+const postPopulate = (e) => {
+    e.preventDefault();
+
+    axios.post(url, body)
+    .then((response) => {
+        alert("Playlist cadastrada com sucesso!")
+        // getAllPlaylists()
+    }).catch((error) => {
+        alert("Tente novamente :(")
+    })
+
+    // setInput("")
+}
+
+
   const navigate = useNavigate();
 
   const goToHome = () => {
@@ -25,7 +33,7 @@ function ListTripsPage() {
   }
 
   const goToAplicationFormPage = () => {
-    navigate('/aplicationFormPage')
+    navigate('/trips/application')
   }
 
   
@@ -36,7 +44,7 @@ function ListTripsPage() {
       <h2>Lista de viagens</h2>
       <button onClick={goToHome} >Voltar</button>
       <button onClick={goToAplicationFormPage} >Inscrever-se</button>
-   {listTrips}
+     <button  >Ver Viagens</button>
     </div>
   )
 }

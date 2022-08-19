@@ -6,7 +6,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   const goToAdminHomePage = ()=>{
-    navigate('/adminHomePage')
+    navigate('/admin/trips/list')
   }
 
   return (

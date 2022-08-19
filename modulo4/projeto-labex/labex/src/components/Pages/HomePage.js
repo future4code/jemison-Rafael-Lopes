@@ -6,7 +6,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   const goToListTripsPage = () => {
-    navigate('/listTripsPage')
+    navigate('/trips/list')
   }
 
   const goToLoginPage = () => {
