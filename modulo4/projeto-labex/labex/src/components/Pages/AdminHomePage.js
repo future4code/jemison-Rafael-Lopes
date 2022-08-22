@@ -6,7 +6,6 @@ function AdminHomePage() {
   useProtectedPage()
 
   const navigate = useNavigate();
-
   
 
    const goToCreateTripPage = () => {
@@ -18,7 +17,12 @@ function AdminHomePage() {
   }
 
   return (
-    <div>
+    <div> 
+
+
+
+
+    ||
       <h1>AdminHomePage</h1>
       <h2>Painel Administrativo</h2>
       <button onClick={goToCreateTripPage} >Criar Viagem</button>
