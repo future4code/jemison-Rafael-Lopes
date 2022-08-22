@@ -13,7 +13,7 @@ function LoginPage() {
   
   const loginToAdm = (event) => {
     event.preventDefault()
-    axios.post(`${BASE_URL}login`, body)
+    axios.post(`${BASE_URL}rafael-lopes-jemison/login`, body)
       .then((response) => {
       localStorage.setItem('token', response.data.token)
         navigate('/admin/trips/list')

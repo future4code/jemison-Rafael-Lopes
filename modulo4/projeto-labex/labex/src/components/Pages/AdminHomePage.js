@@ -1,9 +1,13 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import useProtectedPage from '../Hooks/useProtectedPage';
 
 function AdminHomePage() {
+  useProtectedPage()
 
   const navigate = useNavigate();
+
+  
 
    const goToCreateTripPage = () => {
     navigate('/admin/trips/create')
