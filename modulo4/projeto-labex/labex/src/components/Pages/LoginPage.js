@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import useForm from '../Hooks/useForm';
-import { BASE_URL } from '../constants/constants';
+import {BASE_URL} from '../constants/constants'
 import axios from 'axios';
 
 function LoginPage() {
@@ -9,21 +9,21 @@ function LoginPage() {
   // Body é o valor do form que está sendo retornado no useForm
   const [body, onChange, clear] = useForm({ email: "", password: "" })
 
+  const navigate = useNavigate();
   
-  const login = (event) => {
+  const loginToAdm = (event) => {
     event.preventDefault()
-    axios.post(`${BASE_URL}rafael-lopes-jemison/login`, body)
+    axios.post(`${BASE_URL}login`, body)
       .then((response) => {
-        console.log(response.data)
+      localStorage.setItem('token', response.data.token)
         navigate('/admin/trips/list')
       }).catch((error) => {
-        console.log("Algo deu errado. Tente novamente.")
+        alert("Algo deu errado. Tente novamente.")
       })
 clear()
     // console.log(body)
   }
 
-  const navigate = useNavigate();
 
   const goToLastPage = () => {
     navigate(-1)
@@ -34,7 +34,7 @@ clear()
       <h1>LoginPage</h1>
       <p>Aqui colocar email e senha para logar</p>
 
-      <form onSubmit={login} >
+      <form onSubmit={loginToAdm} >
       <label htmlFor="email">Email:</label>
         <input
           type='email'
@@ -54,7 +54,7 @@ clear()
           value={body.password}
           onChange={onChange}
           placeholder='senha'
-          pattern='^.{6}'
+          pattern='^.{6,}'
           required
         />
         <button>Entrar</button>
