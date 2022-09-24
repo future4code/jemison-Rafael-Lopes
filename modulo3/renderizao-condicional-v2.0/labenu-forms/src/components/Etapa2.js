@@ -1,43 +1,43 @@
 import React, { useState } from "react";
 
 
-export function Etapa2 ({ mudaPagina }) {
+export function Etapa2({ mudaPagina }) {
 
     const [curso, setCurso] = useState("")
     const [unidadeDeEnsino, setUnidadeDeEnsino] = useState("")
 
 
-    function handleCurso (event) {
+    function handleCurso(event) {
         setCurso(event.target.value)
     }
 
-    function handleUnidadeDeEnsino (event) {
+    function handleUnidadeDeEnsino(event) {
         setUnidadeDeEnsino(event.target.value)
     }
 
-    function handleSubmit (event) {
+    function handleSubmit(event) {
         event.preventDefault()
         mudaPagina("4")
     }
 
-    return(
+    return (
         <div>
-             <h1>Etapa 2</h1>
+            <h1>Etapa 2</h1>
 
-             <form onSubmit={handleSubmit}>
-                <label>Qual o curso?   
-                  <input type="text" value={curso} onChange={handleCurso}/>  
+            <form onSubmit={handleSubmit}>
+                <label>Qual o curso?
+                    <input type="text" value={curso} onChange={handleCurso} />
                 </label>
-                
-                <label>Qual unidade de ensino?  
-                    <input type="text" value={unidadeDeEnsino} onChange={handleUnidadeDeEnsino}/>
+
+                <label>Qual unidade de ensino?
+                    <input type="text" value={unidadeDeEnsino} onChange={handleUnidadeDeEnsino} />
                 </label>
-                
-                <input type="submit" value="Enviar" />
-                
-             </form>
-             
+
+                <input type="submit" value="Próxima Página" />
+
+            </form>
+
         </div>
-       
+
     )
 }

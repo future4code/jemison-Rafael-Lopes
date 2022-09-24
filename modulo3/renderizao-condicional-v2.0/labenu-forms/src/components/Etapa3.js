@@ -34,7 +34,7 @@ export function Etapa3 ({ mudaPagina }) {
                         <option value="Nenhum">Não fiz curso complementar</option>
                     </select>
                 </label>
-                <input type="submit" value="Enviar" />
+                <input type="submit" value="Próxima Página" />
                 
              </form>
              

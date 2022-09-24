@@ -54,7 +54,7 @@ export function Etapa1 ({ mudaPagina }) {
                     <option value="2">Ensino Superior Completo</option>
                 </select>
                 
-                <input type="submit" value="Enviar" />
+                <input type="submit" value="Próxima Página" />
                 
              </form>
              
