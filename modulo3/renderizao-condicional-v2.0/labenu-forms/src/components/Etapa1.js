@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ContainerForm, Form, TitleHeader } from "./style";
 
 
 export function Etapa1 ({ mudaPagina }) {
@@ -31,10 +32,10 @@ export function Etapa1 ({ mudaPagina }) {
     }
 
     return(
-        <div>
-             <h1>Etapa 1</h1>
+        <ContainerForm>
+             <TitleHeader>Etapa 1</TitleHeader>
 
-             <form onSubmit={handleSubmit}>
+             <Form onSubmit={handleSubmit}>
                 <label>Nome:  
                   <input type="text" value={nome} onChange={handleNome}/>  
                 </label>
@@ -56,9 +57,9 @@ export function Etapa1 ({ mudaPagina }) {
                 
                 <input type="submit" value="Próxima Página" />
                 
-             </form>
+             </Form>
              
-        </div>
+        </ContainerForm>
        
     )
 }
