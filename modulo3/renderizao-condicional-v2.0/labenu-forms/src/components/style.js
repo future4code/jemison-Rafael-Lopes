@@ -24,6 +24,7 @@ display: flex;
 flex-direction: column;
 padding: 20px;
 `
+
 export const LabelForm = styled.label`
 margin: 10px 0;
 `
@@ -40,8 +41,7 @@ margin-top: 10px;
 @media screen and (min-device-width : 320px) and (max-device-width : 480px){
     width: 80vw;
     height: 4vh;
-  }
- 
+  } 
 `
 
 export const SelectOption = styled.select`
@@ -62,6 +62,12 @@ font-weight: bold;
 border: 1px solid lightgrey;
 border-radius: 3px;
 `
-// @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
-//    Input
-//     }
+
+export const FinalText = styled.div`
+background-color: #4c4c4c;
+padding: 20px 30px;
+font-size: 1.6rem;
+color: #fff;
+width: 85vw;
+text-align: center;
+`
