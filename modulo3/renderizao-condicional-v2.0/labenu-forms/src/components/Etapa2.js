@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ContainerForm, Form, Input, LabelForm, SubmitButton, TitleGap, TitleHeader } from "./style";
 
 
 export function Etapa2({ mudaPagina }) {
@@ -21,23 +22,20 @@ export function Etapa2({ mudaPagina }) {
     }
 
     return (
-        <div>
-            <h1>Etapa 2</h1>
+        <ContainerForm>
+            <TitleHeader>Etapa 2</TitleHeader>
 
-            <form onSubmit={handleSubmit}>
-                <label>Qual o curso?
-                    <input type="text" value={curso} onChange={handleCurso} />
-                </label>
+            <Form onSubmit={handleSubmit}>
+                <LabelForm><TitleGap>Qual o curso?</TitleGap><br />
+                    <Input type="text" value={curso} onChange={handleCurso} />
+                </LabelForm>
 
-                <label>Qual unidade de ensino?
-                    <input type="text" value={unidadeDeEnsino} onChange={handleUnidadeDeEnsino} />
-                </label>
-
-                <input type="submit" value="Próxima Página" />
-
-            </form>
-
-        </div>
+                <LabelForm><TitleGap>Qual unidade de ensino?</TitleGap><br />
+                    <Input type="text" value={unidadeDeEnsino} onChange={handleUnidadeDeEnsino} />
+                </LabelForm>
+                <SubmitButton type="submit" value="Próxima Página" />
+            </Form>
+        </ContainerForm>
 
     )
 }
