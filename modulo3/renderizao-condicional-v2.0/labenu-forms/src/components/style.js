@@ -37,6 +37,11 @@ export const Input = styled.input`
 width: 40vw;
 height: 2.9vh;
 margin-top: 10px;
+@media screen and (min-device-width : 320px) and (max-device-width : 480px){
+    width: 80vw;
+    height: 4vh;
+  }
+ 
 `
 
 export const SelectOption = styled.select`
@@ -57,5 +62,6 @@ font-weight: bold;
 border: 1px solid lightgrey;
 border-radius: 3px;
 `
-
-
+// @media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+//    Input
+//     }
