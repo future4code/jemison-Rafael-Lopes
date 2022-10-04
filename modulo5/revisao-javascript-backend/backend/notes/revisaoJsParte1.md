@@ -31,7 +31,7 @@ Desestruturação é uma expressão do JavaScript que torna possível "desembala
 
 + Antes do ES6
 
-`let apresentacao = ["Olá", "eu" , "sou", "a", "Sarah"];` 
+`let apresentacao = ["Olá", "eu" , "sou", "a", "Sarah"];`
 `let saudacao = apresentacao[0];`
 `let nome = apresentacao[4];`
 
@@ -45,7 +45,7 @@ Desestruturação é uma expressão do JavaScript que torna possível "desembala
 `console.log(saudacao);//"Olá"`
 `console.log(pronome);//"eu"`
 
-E se quisermos obter o primeiro e o último item do nosso array, em vez do primeiro e do segundo item, e atribuir somente duas variáveis? Isso pode ser feito. 
+E se quisermos obter o primeiro e o último item do nosso array, em vez do primeiro e do segundo item, e atribuir somente duas variáveis? Isso pode ser feito.
 
 `let [saudacao,,,,nome] = ["Olá", "eu" , "sou", "a", "Sarah"];`
 
@@ -101,4 +101,39 @@ Exemplo
 **Outputs** - envia no retorno (return).
 
 ### O que é um callback
+
+Uma função sendo passada como argumento para outra função. Para que essa outra função execute a função recebida.
+
+<code>
+const imprimeTexto = (texto)=>{
+    console.log(texto)
+}
+
+const matriculaPessoa=(pessoa, callback)=>{
+    if(pessoa.idade>=18){
+        callback("Matrícula realizada")
+    }else{
+        callback("Idade insuficiente. Precisa ser maior de 18 anos.)
+    }
+}
+
+const ana={
+    idade: 15
+}
+
+const joao{
+    idade:21
+}
+
+matriculaPessoa(ana, imprimeTexto)
+matriculaPessoa(joao, imprimeTexto)
+</code>
+
+É muito comum nos métodos filter() e map().
+
+O callback permite uma função chamar outra função.
+
+### Notação de colchetes em objetos
+
+Utilizado para acessar uma propriedade de forma dinâmica.
 
