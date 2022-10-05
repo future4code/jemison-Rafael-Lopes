@@ -1,7 +1,16 @@
-const ConversorDeTemperatura = (temperatura) => {
-    const tCelsius = temperatura;
-    const celsiusParaFahrenheit = tCelsius * 9 / 5 + 32;
-    let texto = tCelsius + '\xB0C é ' + celsiusParaFahrenheit + ' \xB0F';
-    console.log(ConversorDeTemperatura(20, texto))
+
+
+const converteParaFahrenheit = (C) => { //input
+    const celsiusParaFahrenheit = C * 9 / 5 + 32;
+    let fahrenheit = `${C} \xB0 Celsius é equivalente a ${celsiusParaFahrenheit} \xB0 Farenheit.`
+    return fahrenheit; // output   
 }
 
+const converteParaKelvin = (C) => {
+    const celsiusParaKelvin = C + 273.15;
+    let kelvin = `${C} \xB0 Celsius é equivalente a ${celsiusParaKelvin} \xB0 Kelvin.`
+    return kelvin
+}
+
+console.log(converteParaFahrenheit(30));
+console.log(converteParaKelvin(30));
