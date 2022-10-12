@@ -5,7 +5,7 @@
 // "Olá, (Nome)! Você tem (sua idade) anos."
 
 const myName = "Rafael";
-const myAge = 30;
+const myAge = 39;
 const statement = `Olá, ${myName}! Você tem ${myAge} anos.`;
 
 function message() {
@@ -15,3 +15,7 @@ function message() {
 const result = message()
 console.log(result);
 
+// c) Altere o programa acima para que mostre também a sua idade daqui a sete anos.
+const nextSevenYears = Number(myAge) + 7;
+const statement2 = `Olá, ${myName}! Você tem ${myAge} anos. Em sete anos você terá ${nextSevenYears} anos de idade.`
+console.log(statement2);
