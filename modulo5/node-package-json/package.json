@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "meusDados": "node ./meusDados.js",
    "start":"node ./index.js"
   },
   "author": "Rafael Lopes",
