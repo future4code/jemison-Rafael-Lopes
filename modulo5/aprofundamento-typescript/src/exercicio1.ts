@@ -16,4 +16,24 @@ let meuNumero: number = 10
 // Ex:
 let meuNumero2: number | string = "dez"
 
+// c) Agora crie um novo objeto. Este objeto é uma pessoa, e deve possuir três propriedades:
+
+// `nome`, que é uma string;
+// `idade`, que é um número;
+// `corFavorita`, que é uma string.
+
+type Pessoa = {
+    nome: string,
+    idade: number,
+    corFavorita: string
+}
+
+// Crie mais três objetos, que também precisam ter apenas os campos definidos acima.
+// Crie um tipo Pessoa para garantir que todos os objetos tenham os mesmos campos.
+
+const pessoa1: Pessoa = { nome: 'Rafael', idade: 39, corFavorita: 'azul' };
+const pessoa2: Pessoa = { nome: 'Ane', idade: 36, corFavorita: 'Lilás' };
+const pessoa3: Pessoa = { nome: 'Rodolpho', idade: 20, corFavorita: 'verde' };
+
+
 
