@@ -35,5 +35,20 @@ const pessoa1: Pessoa = { nome: 'Rafael', idade: 39, corFavorita: 'azul' };
 const pessoa2: Pessoa = { nome: 'Ane', idade: 36, corFavorita: 'Lilás' };
 const pessoa3: Pessoa = { nome: 'Rodolpho', idade: 20, corFavorita: 'verde' };
 
+// d) Modifique a propriedade corFavorita para que apenas seja possível escolher entre as cores do arco-íris. Utilize um enum para isso.
 
+enum AlteraCoresFavoritas {
+    VERMELHO = "vermelho",
+    LARANJA = "laranja",
+    AMARELO = "amarelo",
+    VERDE = "verde",
+    AZUL = "azul",
+    VIOLETA = "violeta",
+    ANIL = "anil"
+}
 
+const novaCorFavorita = {
+    corFavorita: AlteraCoresFavoritas.ANIL
+}
+
+console.log(AlteraCoresFavoritas);
