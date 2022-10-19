@@ -40,6 +40,11 @@ function obterEstatisticas(numeros: number[]) {
     return estatisticas
 }
 
+type Estatistica = {
+    maior: number,
+    menor: number,
+    media: number
+}
 // b) Quais outras variáveis compõem essa função? Explicite a tipagem de todas elas
 
 // c) Crie um type chamado amostra de dados, isto é, um objeto com as propriedades numeros e obterEstatisticas.
@@ -53,5 +58,5 @@ function obterEstatisticas(numeros: number[]) {
 
 type amostraDeDados = {
     nuemros: number[],
-    obterEstattisticas: (numeros: number[]) => estatistica
+    obterEstattisticas: (numeros: number[]) => Estatistica
 }
