@@ -20,13 +20,13 @@
 
 // Resposta: As entradas são números ordenados e a saída é a estatísitca dos números maiores, menores e a média deles.
 
-function obterEstatisticas(numeros:number[]) {
+function obterEstatisticas(numeros: number[]) {
 
-    const numerosOrdenados:number[] = numeros.sort(
-        (a:number, b:number) => a - b
+    const numerosOrdenados: number[] = numeros.sort(
+        (a: number, b: number) => a - b
     )
 
-    let soma:number = 0
+    let soma: number = 0
 
     for (let num of numeros) {
         soma += num
@@ -37,7 +37,7 @@ function obterEstatisticas(numeros:number[]) {
         menor: numerosOrdenados[0],
         media: soma / numeros.length
     }
-        return estatisticas
+    return estatisticas
 }
 
 // b) Quais outras variáveis compõem essa função? Explicite a tipagem de todas elas
@@ -50,3 +50,8 @@ function obterEstatisticas(numeros:number[]) {
 
 //     obterEstatisticas: (numeros) => {...}
 // }
+
+type amostraDeDados = {
+    nuemros: number[],
+    obterEstattisticas: (numeros: number[]) => estatistica
+}
