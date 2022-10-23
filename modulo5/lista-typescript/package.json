@@ -10,6 +10,8 @@
     "exercicio4": "echo Transpilando... && tsc && echo Executando... && node ./build/exercicio4.js",
     "exercicio5":"echo Transpilando... && tsc && echo Executando... && node ./build/exercicio5.js",
     "exercicio6":"echo Transpilando.. && tsc && echo Executando... && node ./build/exercicio6.js",
+    "exercicio7":"echo Transpilando... && tsc && echo Executando... && node ./build/exercicio7.js",
+    "exercicio8":"echo Transpilando... && tsc && echo Executando... && node ,build/exercicio8.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
