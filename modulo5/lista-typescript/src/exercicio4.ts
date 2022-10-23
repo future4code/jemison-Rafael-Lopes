@@ -43,3 +43,5 @@ function buscaPessoasPorSetor(): PessoasColaboradoras[] {
     })
 }
 console.log(buscaPessoasPorSetor());
+
+// Precisa verificar o por que de não estar aceitando argumento
