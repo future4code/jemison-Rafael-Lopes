@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "echo Transpilando.. && echo Executando... && node ./build/index.js",
+    "start": "echo Transpilando... && echo Executando... && node ./build/index.js",
     "build":"tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,19 +1,16 @@
-import express, {Request, Response} from "express"
+import express, { Request, Response } from "express"
 import cors from 'cors';
 
-const app = express() 
+const app = express()
 
-app.use(express.json()) 
+app.use(express.json())
 
-app.use(cors()) 
+app.use(cors())
 
-app.get('/teste/:id', (req: Request, res: Response)=>{
-    const id = req.params.id
-    console.log(id);
-    
+app.get('/', (req: Request, res: Response) => {
     res.status(201).send('Hello from Express')
-})
+});
 
-app.listen(3003, ()=>{
+app.listen(3003, () => {
     console.log("Server is running in http://localhost:3003");
 })

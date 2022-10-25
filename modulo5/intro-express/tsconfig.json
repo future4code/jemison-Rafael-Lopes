@@ -7,7 +7,7 @@
     "outDir": "./build", /* Specify an output folder for all emitted files. */
     "removeComments": true, /* Disable emitting comments. */
     "noEmitOnError": true, /* Disable emitting files if any type checking errors are reported. */
-    "noImplicitAny": true,
-    /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    "noImplicitAny": true, /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    "esModuleInterop": true
   }
 }
