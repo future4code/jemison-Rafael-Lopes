@@ -7,6 +7,7 @@
     "exe2": "echo Transpilando... && tsc && echo Executando... && node ./build/exercicio2.js",
     "exe4": "echo Transpilando... && tsc && echo Executando... && node ./build/exercicio4.js",
     "exe7": "echo Transpilando... && tsc && echo Executando... && node ./build/exercicio7.js",
+    "exe8":"echo Transpilando... && tsc && echo Executando... && node ./build/exercicio8.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rafael Lopes",
