@@ -38,5 +38,5 @@ export const usuarios: Users[] = [
         contato: "9011-5633",
         estudante: false
     }
-]
+];
 
