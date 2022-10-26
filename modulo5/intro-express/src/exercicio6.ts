@@ -7,7 +7,7 @@
 
 import { Posts } from "./exercicio5"
 
-const arrayDePosts: Posts[] = [
+export const arrayDePosts: Posts[] = [
     {
         "userId": 1,
         "id": 1,
