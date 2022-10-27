@@ -2,7 +2,7 @@
 import { Chores } from "./exercicio2"
 
 
-const toDoArray: Chores[] = [
+export const toDoArray: Chores[] = [
     {
         "userId": 123,
         "id": 1,
