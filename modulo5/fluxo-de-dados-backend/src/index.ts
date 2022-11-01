@@ -43,6 +43,14 @@ app.put('/test/products', (req: Request, res: Response) => {
     res.status(200).send({ newProduct })
 })
 
+
+// Exercício 5
+// Crie um endpoint que retorna todos os produtos.
+
+app.get('/products',(req:Request, res: Response)=>{
+    res.status(200).send(mockup.products)
+})
+
 // Servidor
 app.listen(3003, () => {
     console.log("Server is running in http://localhost:3003");
