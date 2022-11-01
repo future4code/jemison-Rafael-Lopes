@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
-import cors from 'cors'
+import cors from 'cors';
+import * as mockup from './data'
 
 const app = express();
 
@@ -14,8 +15,18 @@ app.get('/test', (req: Request, res: Response) => {
     res.status(200).send("Servidor rodando na porta 3003")
 })
 
+// Exercício 4
+// Desenvolva um endpoint que cria um novo produto e retorna a lista de produtos atualizada. 
+// A id do produto deve ser gerada automaticamente pela API.
 
-
+app.post('/test',(req:Request, res:Response)=>{
+    const newProduct = req.body.name
+    
+    // Tratamento para que seja passado o parametro correto
+    if(!newProduct){
+        res.status(400)
+    }
+})
 
 // Servidor
 app.listen(3003, () => {

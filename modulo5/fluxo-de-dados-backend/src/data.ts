@@ -7,28 +7,28 @@ import * as allTypes from './type'
 
 export const products: allTypes.Product[] = [
     {
-        id: 1,
+        id: 'product1',
         name: 'shoes',
-        price: '$ 50,00'
+        price: 50.00
     },
     {
-        id: 2,
+        id: 'product2',
         name: 'boots',
-        price: '$ 75,00'
+        price: 75.00
     },
     {
-        id: 3,
+        id: 'product3',
         name: 'T-shirt',
-        price: '$ 20,00'
+        price: 20.00
     },
     {
-        id: 4,
+        id: 'product4',
         name: 'socks',
-        price: '$ 3,00'
+        price: 3.00
     },
     {
-        id: 5,
+        id: 'product5',
         name: 'jacket',
-        price: '$ 45,00'
+        price: 45.00
     },
 ]

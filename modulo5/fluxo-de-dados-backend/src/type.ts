@@ -3,7 +3,7 @@
 // e faça a tipagem do array de produtos.
 
 export type Product = {
-    id: number,
+    id: string,
     name: string,
-    price: string
+    price: number
 }
