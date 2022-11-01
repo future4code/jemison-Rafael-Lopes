@@ -14,8 +14,6 @@ app.get('/test', (req: Request, res: Response) => {
     res.status(200).send("Servidor rodando na porta 3003")
 })
 
-// Exercício 2 no arquivo externo data.ts
-
 
 
 
