@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import * as mockup from './data'
+import { products } from './data'
 
 const app = express();
 
@@ -19,37 +19,45 @@ app.get('/test', (req: Request, res: Response) => {
 // Desenvolva um endpoint que cria um novo produto e retorna a lista de produtos atualizada. 
 // A id do produto deve ser gerada automaticamente pela API.
 
-app.put('/test/products', (req: Request, res: Response) => {
-    const newProduct = req.body.name
-    const { id, name, price } = req.body
+app.put('/products/newproduct', (req: Request, res: Response) => {
+    const { name, price } = req.body
 
     // Tratamento para que seja passado o parametro correto
-    if (!newProduct || !id || !name || price) {
+    if (!name || !price) {
         res.status(400).send("Algo deu errado, verifique se os parametros estão corretos")
     }
 
-    for (let i = 0; i < newProduct.length; i++) {
+    const findProduct = products.find((element) => {
+        return element.name === name
+    })
 
-        if (newProduct[i].id === newProduct) {
-            newProduct[i].newProduct.push(
-                {
-                    id: Date.now().toString(),
-                    name: name,
-                    price: price
-                }
-            )
-        }
+    if (findProduct) {
+        res.status(400).send("O produto procurado já existe")
+    } else {
+        products.push(
+            {
+                id: Date.now().toString(),
+                name: name,
+                price: price
+            }
+        )
     }
-    res.status(200).send({ newProduct })
+    res.status(200).send({ products })
 })
 
 
 // Exercício 5
 // Crie um endpoint que retorna todos os produtos.
 
-app.get('/products',(req:Request, res: Response)=>{
-    res.status(200).send(mockup.products)
+app.get('/products', (req: Request, res: Response) => {
+    res.status(200).send(products)
 })
+
+// Exercício 6
+// Crie um endpoint que edita o preço de um determinado produto e retorna a lista de produtos atualizada.
+
+
+
 
 // Servidor
 app.listen(3003, () => {
