@@ -57,7 +57,18 @@ app.get('/products', (req: Request, res: Response) => {
 // Crie um endpoint que edita o preço de um determinado produto e retorna a lista de produtos atualizada.
 
 
+// Exercício 7
+// Construa um endpoint que deleta um determinado produto e retorna a lista de produtos atualizada.
 
+
+// Exercício 8
+// Refatore o endpoint do exercício 4 (criar produto) para que sejam implementados fluxos de validação dos dados recebidos (name e price)
+
+// Exercício 9
+// Refatore o endpoint do exercício 6 (editar produto) para que sejam implementados fluxos de validação dos dados recebidos (price)
+
+// Exercício 10
+// Refatore o endpoint do exercício 7 (deletar produto) para que sejam implementados fluxos de validação dos dados recebidos
 
 // Servidor
 app.listen(3003, () => {
