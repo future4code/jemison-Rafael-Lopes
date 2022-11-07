@@ -9,6 +9,7 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import { users } from './data';
+import { User } from "./types";
 
 
 const app = express()
@@ -70,7 +71,7 @@ app.get('/users/user', (req: Request, res: Response) => {
         const userSearched = users.find((user) => {
             return user.name.toLowerCase() === userName.toLowerCase()
         })
-// b. Altere este endpoint para que ele devolva uma mensagem de erro caso nenhum usuário tenha sido encontrado.
+        // b. Altere este endpoint para que ele devolva uma mensagem de erro caso nenhum usuário tenha sido encontrado.
         if (!userSearched) {
             errorCode = 404
             throw new Error("Usuário não encontrado");
@@ -81,9 +82,44 @@ app.get('/users/user', (req: Request, res: Response) => {
     }
 })
 
+// Exercício 4
+// Fizemos algumas buscas no nosso conjunto de itens, agora é hora de adicionar coisas. Comecemos criando um usuário na nossa lista. 
+// Crie um endpoint que use o método `POST` para adicionar um item ao nosso conjunto de usuários.
+// a. Mude o método do endpoint para `PUT`. O que mudou?
+// R: Após bater no endpoint, aparentemente nada mudou. O item foi adicionado assim como se tivesse utilizado o método post
 
+// b. Você considera o método `PUT` apropriado para esta transação? Por quê?
+// R: Didaticamente, não é apropriado porque o PUT foi criado para atualizar recursos enquanto o POST para criar novos recursos
 
+app.post('/users', (req: Request, res: Response) => {
 
+    let errorCode = 400
+    try {
+        const { name, email, type, age } = req.body
+
+        if (!name || !email || !type || !age) {
+            throw new Error("Verifique se os parâmetros passados correspondem a name, email, type, age");
+        }
+
+        if (type !== "ADMIN" && type !== "NORMAL") {
+            errorCode = 402
+            throw new Error("O usuário precisa ser do tipo ADMIN ou NORMAL");
+        }
+        // Novo item 
+        const newUser: User = {
+            id: Math.random(),
+            name: name,
+            email: email,
+            type: type,
+            age: age
+        }
+        // Atualizando a list com o novo item
+        users.push(newUser)
+        res.status(201).send(users)
+    } catch (error: any) {
+        res.status(errorCode).send(error.message)
+    }
+})
 
 
 // Verificação do servidor
