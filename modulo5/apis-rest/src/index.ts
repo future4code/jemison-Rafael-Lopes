@@ -51,6 +51,40 @@ app.get('/users/user/:type', (req: Request, res: Response) => {
     }
 })
 
+// Exercício 3    
+// Vamos agora praticar o uso de buscas mais variáveis. Faça agora um endpoint de busca que encontre um usuário buscando por nome.
+// a. Qual é o tipo de envio de parâmetro que costuma ser utilizado por aqui?
+// R: Query params
+
+app.get('/users/user', (req: Request, res: Response) => {
+
+    let errorCode = 400
+    try {
+        const userName = req.query.name as string
+
+        if (!userName) {
+            errorCode = 422
+            throw new Error("Falta passar o nome como parâmetro");
+        }
+
+        const userSearched = users.find((user) => {
+            return user.name.toLowerCase() === userName.toLowerCase()
+        })
+// b. Altere este endpoint para que ele devolva uma mensagem de erro caso nenhum usuário tenha sido encontrado.
+        if (!userSearched) {
+            errorCode = 404
+            throw new Error("Usuário não encontrado");
+        }
+        res.status(200).send(userSearched)
+    } catch (error: any) {
+        res.status(errorCode).send(error.message)
+    }
+})
+
+
+
+
+
 
 // Verificação do servidor
 app.listen(3003, () => {
