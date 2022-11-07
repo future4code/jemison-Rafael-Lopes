@@ -8,7 +8,8 @@
 
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { users } from './data'
+import { users } from './data';
+
 
 const app = express()
 app.use(express.json())
@@ -21,9 +22,33 @@ app.get('/users', (req: Request, res: Response) => {
 // Exercício 2
 // Agora, vamos criar um novo endpoint, que busque todos os usuários que tenham uma propriedade `type` específica, 
 // recebendo apenas um `type` por vez.
+// a. Como você passou os parâmetros de type para a requisição? Por quê?
+// R: Por path params pois identifica recursos específicos
 
-app.get('/users/user', (req: Request, res: Response) => {
+// b. Você consegue pensar em um jeito de garantir que apenas types válidos sejam utilizados
+// R: Por meio da utilização de enum para que aceite apenas os tipos que estão no arquivo types.ts
 
+app.get('/users/user/:type', (req: Request, res: Response) => {
+    let errorCode = 400
+
+    try {
+        const userType = req.params.type
+
+        if (userType === ':type') {
+            errorCode = 422
+            throw new Error("Falta passar o tipo do usuário como parâmetro ");
+        }
+        const typeSearched = users.filter((type) => {
+            return type.type.toLowerCase() === userType.toLowerCase()
+        })
+        if (!typeSearched) {
+            errorCode = 404
+            throw new Error("Tipo de usuário não encontrado");
+        }
+        res.status(200).send(typeSearched)
+    } catch (error: any) {
+        res.status(errorCode).send(error.message)
+    }
 })
 
 
