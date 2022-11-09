@@ -70,3 +70,6 @@ R: SELECT id, name, salary from Actor WHERE salary < 500001
 
 ![](2022-11-09-09-54-48.png)
 
+e) Gerou um error Code: 1054. Unknown column 'nome' in 'field list'. A coluna 'nome' não foi encontrada. Corrigi nome para name que é a opção existente na tabela.
+
+![](2022-11-09-09-59-41.png)
