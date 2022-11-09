@@ -123,3 +123,21 @@ VALUES(
 "2006-01-06",
 7
 );
+
+c) INSERT INTO Filmes (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+"002",
+"Doce de mãe",
+"Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela",
+"2012-12-27",
+10
+);
+
+d) INSERT INTO Filmes (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+"003",
+"Dona Flor e Seus Dois Maridos",
+"Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce.",
+"2017-11-02",
+10
+);
