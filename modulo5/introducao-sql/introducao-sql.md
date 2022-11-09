@@ -73,3 +73,10 @@ R: SELECT id, name, salary from Actor WHERE salary < 500001
 e) Gerou um error Code: 1054. Unknown column 'nome' in 'field list'. A coluna 'nome' não foi encontrada. Corrigi nome para name que é a opção existente na tabela.
 
 ![](2022-11-09-09-59-41.png)
+
+## Exercício 4
+
+a) SELECT * FROM Actor WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300000
+
+R: A query acima solicita que retorne todos atores que possuem o nome que comece com a letra A ou J e com o salário maior que 300 mil.
+
