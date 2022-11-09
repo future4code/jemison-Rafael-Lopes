@@ -92,3 +92,7 @@ R: SELECT name from Actor WHERE name LIKE "G%" OR name LIKE "g%"
 
 ![](2022-11-09-10-49-03.png)
 
+d) Escreva uma query com os atores que tenham a letra "a" ou "A" ou "g" ou "G" no nome e o salário entre R$350.000,00 e R$900.000,00
+
+R: SELECT * FROM Actor WHERE (name LIKE "%a%" OR name LIKE "%A%" OR name LIKE "%g%" OR name LIKE "%G%") AND salary BETWEEN 350000 AND 900000;
+
