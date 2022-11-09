@@ -80,3 +80,15 @@ a) SELECT * FROM Actor WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300
 
 R: A query acima solicita que retorne todos atores que possuem o nome que comece com a letra A ou J e com o salário maior que 300 mil.
 
+b) Escreva uma query com os atores que não comecem com a letra "A" e tenham o salário maior do que R$350.000,00
+
+R: SELECT name, salary from Actor WHERE name NOT LIKE "A%" AND salary > 350000
+
+![](2022-11-09-10-53-04.png)
+
+c) Escreva uma query com os atores que possuam "G" ou "g" em qualquer parte do nome.
+
+R: SELECT name from Actor WHERE name LIKE "G%" OR name LIKE "g%"
+
+![](2022-11-09-10-49-03.png)
+
