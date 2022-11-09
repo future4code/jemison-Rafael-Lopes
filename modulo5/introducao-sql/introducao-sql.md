@@ -111,7 +111,7 @@ avaliacao INT NOT NULL
 - CREATE TABLE Filmes => Cria uma entidade (tabela) com o nome Filmes
 - id VARCHAR(255) PRIMARY KEY => torna possível criar uma chave primária como id com no máximo 255 caracteres
 - nome VARCHAR(255) NOT NULL => indica que a coluna não pode ser nula. Precisa ter algum valor e nome do título não pode ultrapassar os 255 caracteres de espaço reservado
-- sinopse TEXT(10000) NOT NULL, => este parametro será obrigatório e do tipo texto sem limitação de caracteres 
+- sinopse TEXT(10000) NOT NULL, => este parametro será obrigatório e do tipo texto sem limitação de caracteres
 - data_de_lancamento DATE NOT NULL, => a data de lançamento deverá ser criada respeitando o formato YYYY-MM-DD e esse dado será obrigatório
 - avaliacao INT NOT NULL => o parametro avaliação é obrigatória e receberá um número inteiro
 
@@ -150,3 +150,25 @@ VALUES(
 "2000-09-10",
 10
 );
+
+## Exercício 6
+
+### Escreva uma query que
+
+a) Retorne o id, título e avaliação a partir de um id específico
+
+R: SELECT id, nome, avaliacao FROM Filmes WHERE id = 002
+
+![](2022-11-09-15-33-34.png)
+
+b) Retorne um filme a partir de um nome específico
+
+R: SELECT * FROM Filmes WHERE nome = "O Auto da Compadecida"
+
+![](2022-11-09-15-36-50.png)
+
+c) Retorne o id, título e sinopse dos filmes com avaliação mínima de `7`
+
+R: SELECT id, nome, sinopse FROM Filmes WHERE avaliacao > 7
+
+![](2022-11-09-15-38-40.png)
