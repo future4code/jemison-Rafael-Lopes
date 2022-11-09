@@ -172,3 +172,29 @@ c) Retorne o id, título e sinopse dos filmes com avaliação mínima de `7`
 R: SELECT id, nome, sinopse FROM Filmes WHERE avaliacao > 7
 
 ![](2022-11-09-15-38-40.png)
+
+## Exercício 7
+
+### Escreva uma query que
+
+a) Retorna um filme cujo título contenha a palavra `vida`
+
+R: SELECT * FROM Filmes WHERE nome LIKE "%vida%" . Não retornou nada.
+
+b) Realize a pesquisa de um filme, ou seja: pesquise se o termo de busca está contido no título ou na sinopse. Utilize qualquer `TERMO DE BUSCA` para exemplificar.
+
+R: SELECT * FROM Filmes WHERE nome LIKE "%vida%" OR sinopse LIKE "%vida%". Encontrou o termo na coluna sinopse:
+
+![](2022-11-09-15-56-10.png)
+
+c) Procure por todos os filmes que já tenham lançado
+
+R: SELECT * FROM Filmes WHERE data_de_lancamento < "2012-05-04";
+
+![](2022-11-09-15-59-34.png)
+
+d) Procure por algum filme que já tenha lançado, com o termo de busca contido no título ou sinopse e com a avaliação maior do que `7`.
+
+R: SELECT * FROM Filmes WHERE data_de_lancamento < "2012-05-04" AND (nome LIKE "%aventuras%" OR sinopse LIKE "%aventuras%") AND avaliacao > 7.
+
+![](2022-11-09-16-05-36.png)
