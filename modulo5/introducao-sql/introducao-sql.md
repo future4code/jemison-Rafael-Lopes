@@ -141,3 +141,12 @@ VALUES(
 "2017-11-02",
 10
 );
+
+e) INSERT INTO Filmes (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+"004",
+"O Auto da Compadecida",
+"As aventuras dos nordestinos João Grilo (Matheus Natchergaele), um sertanejo pobre e mentiroso, e Chicó (Selton Mello), o mais covarde dos homens.",
+"2000-09-10",
+10
+);
