@@ -115,3 +115,11 @@ avaliacao INT NOT NULL
 - data_de_lancamento DATE NOT NULL, => a data de lançamento deverá ser criada respeitando o formato YYYY-MM-DD e esse dado será obrigatório
 - avaliacao INT NOT NULL => o parametro avaliação é obrigatória e receberá um número inteiro
 
+b) INSERT INTO Filmes (id, nome, sinopse, data_de_lancamento, avaliacao)
+VALUES(
+"001",
+"Se Eu Fosse Você",
+"Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",
+"2006-01-06",
+7
+);
