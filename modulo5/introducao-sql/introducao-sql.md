@@ -96,3 +96,22 @@ d) Escreva uma query com os atores que tenham a letra "a" ou "A" ou "g" ou "G" n
 
 R: SELECT * FROM Actor WHERE (name LIKE "%a%" OR name LIKE "%A%" OR name LIKE "%g%" OR name LIKE "%G%") AND salary BETWEEN 350000 AND 900000;
 
+# Exercício 5
+
+a) Explique a query resumidadmente
+
+CREATE TABLE Filmes(
+id VARCHAR(255) PRIMARY KEY,
+nome VARCHAR(255) NOT NULL,
+sinopse TEXT NOT NULL,
+data_de_lancamento DATE NOT NULL,
+avaliacao INT NOT NULL
+);
+
+- CREATE TABLE Filmes => Cria uma entidade (tabela) com o nome Filmes
+- id VARCHAR(255) PRIMARY KEY => torna possível criar uma chave primária como id com no máximo 255 caracteres
+- nome VARCHAR(255) NOT NULL => indica que a coluna não pode ser nula. Precisa ter algum valor e nome do título não pode ultrapassar os 255 caracteres de espaço reservado
+- sinopse TEXT(10000) NOT NULL, => este parametro será obrigatório e do tipo texto sem limitação de caracteres 
+- data_de_lancamento DATE NOT NULL, => a data de lançamento deverá ser criada respeitando o formato YYYY-MM-DD e esse dado será obrigatório
+- avaliacao INT NOT NULL => o parametro avaliação é obrigatória e receberá um número inteiro
+
