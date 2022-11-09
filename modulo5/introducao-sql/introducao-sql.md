@@ -17,4 +17,7 @@ a) Os demais comandos que estão na query são:
 - gender VARCHAR(6) => o parâmetro gender será criado no formato string de no máximo 6 caracteres
 - NOT NULL => indica que a coluna não pode ser nula. Precisa ter algum valor
 
-b) Comando SHOW DATABASES: 
+b) Comando SHOW DATABASES: retornou dua linhas (rows). Uma chamada 'information_schema' e outra chamada 'jbl-4415982-rafael-lopes'.
+E para o comando SHOW TABLES: retornou a table Actor.
+
+c) DESCRIBES retorna o tipo de dados configurado em cada campo![](2022-11-08-21-27-39.png)
