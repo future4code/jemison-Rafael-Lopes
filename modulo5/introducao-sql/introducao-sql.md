@@ -20,4 +20,11 @@ a) Os demais comandos que estão na query são:
 b) Comando SHOW DATABASES: retornou dua linhas (rows). Uma chamada 'information_schema' e outra chamada 'jbl-4415982-rafael-lopes'.
 E para o comando SHOW TABLES: retornou a table Actor.
 
-c) DESCRIBES retorna o tipo de dados configurado em cada campo![](2022-11-08-21-27-39.png)
+c) DESCRIBES retorna o tipo de dados configurado em cada campo
+![](2022-11-08-21-27-39.png)
+
+## Exercício 2
+a) Escreva uma query que crie a atriz Glória Pires, com o id 002, salário R$1.200.000 e data de nascimento 23 de Agosto de 1963 
+![](2022-11-08-22-21-23.png)
+
+b) Retornou um erro de entrada duplicada em razão de já existir um item com chave única na tabela
