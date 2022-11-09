@@ -46,4 +46,17 @@ f) Adicionei os atores Rodrigo Santoro e Paola Oliveira.
 
 ![](2022-11-09-09-21-59.png)
 
+## Exercício 3
+
+a) Escreva uma query que retorne todas as informações das atrizes.
+
+R: SELECT * from Actor WHERE gender = "female"
+
+![](2022-11-09-09-27-07.png)
+
+b) Escreva uma query que retorne o salário do ator com o nome Tony Ramos
+
+R: SELECT name, salary from Actor WHERE name = "Tony Ramos"
+
+![](2022-11-09-09-41-51.png)
 
