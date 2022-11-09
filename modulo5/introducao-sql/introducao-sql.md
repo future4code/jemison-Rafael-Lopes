@@ -60,3 +60,7 @@ R: SELECT name, salary from Actor WHERE name = "Tony Ramos"
 
 ![](2022-11-09-09-41-51.png)
 
+c) Escreva uma query que retorne todas as informações que tenham o gender com o valor "invalid". Explique o resultado.
+
+R: SELECT gender from Actor WHERE gender = "invalid". Retornou a coluna gender com row = 0.
+
