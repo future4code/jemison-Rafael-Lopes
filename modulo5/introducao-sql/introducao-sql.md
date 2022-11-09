@@ -64,3 +64,9 @@ c) Escreva uma query que retorne todas as informações que tenham o gender com 
 
 R: SELECT gender from Actor WHERE gender = "invalid". Retornou a coluna gender com row = 0.
 
+d) Escreva uma query que retorne o id, nome e salário de todos que tenham o salário com o valor máximo de R$500.000
+
+R: SELECT id, name, salary from Actor WHERE salary < 500001
+
+![](2022-11-09-09-54-48.png)
+
