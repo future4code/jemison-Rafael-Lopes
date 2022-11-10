@@ -2,7 +2,7 @@
 
 ## Exercício 1
 
-a) ALTER TABLE Actor DROP COLUMN salary => esse comando apaga da tabela Actor a coluna salário 
+a) ALTER TABLE Actor DROP COLUMN salary => esse comando apaga da tabela Actor a coluna salário
 
 b) ALTER TABLE Actor CHANGE gender sex VARCHAR(6) => a coluna gender será nomeada para sex e poderá receber até 6 caracteres
 
@@ -18,7 +18,7 @@ b) UPDATE Actor SET name = "JULIANA PAES" WHERE name = "Juliana Paes" => altera 
 
 c) UPDATE Actor SET name = "Moacyr Franco", birth_date = "2020-02-10", salary = 600000, gender = "male" WHERE id = "005" => atualiza todas as informações do ator com o id 005
 
-d) UPDATE Actor SET name = "Moacyr Franco" WHERE name = "Paula Soares" 
+d) UPDATE Actor SET name = "Moacyr Franco" WHERE name = "Paula Soares"
 
 Resultado: 0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0 => não encontrou correspondência com o name = "Paula Soares". Logo, nada mudou na tabela
 
@@ -34,6 +34,18 @@ a) SELECT MAX(salary) FROM Actor => seleciona o maior salário na tabela Actor
 
 b) SELECT MIN(salary) FROM Actor WHERE gender = "female"=> seleciona o menor salário das atrizes na tabela Actor
 
-c) SELECT COUNT(*) FROM Actor WHERE gender = "female" => retorna a quantidade de atrizes na tabela Actor 
+c) SELECT COUNT(*) FROM Actor WHERE gender = "female" => retorna a quantidade de atrizes na tabela Actor
 
 d) SELECT SUM(salary) FROM Actor => retorna a soma de todos os salários da tabela Actor
+
+## Exercício 5
+
+a) SELECT COUNT(*), gender FROM Actor GROUP BY gender => retorna a quantidade de pessoas do gender male e female
+
+b) SELECT name, id FROM Actor ORDER BY name DESC => retorna somente o id e o nome dos atores em ordem decrescente alfabética
+
+c) SELECT * FROM Actor ORDER BY salary => retorna todas as pessoas atoras ordenados pelo salário
+
+d) SELECT * FROM Actor ORDER BY salary DESC LIMIT 3 => retorna as pessoas atoras com os três maiores salarios
+
+e) SELECT AVG(salary), gender FROM Actor GROUP BY gender => retorna a média de salário por gênero
