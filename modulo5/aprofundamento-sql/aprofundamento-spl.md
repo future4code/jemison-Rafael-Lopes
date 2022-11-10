@@ -49,3 +49,9 @@ c) SELECT * FROM Actor ORDER BY salary => retorna todas as pessoas atoras ordena
 d) SELECT * FROM Actor ORDER BY salary DESC LIMIT 3 => retorna as pessoas atoras com os três maiores salarios
 
 e) SELECT AVG(salary), gender FROM Actor GROUP BY gender => retorna a média de salário por gênero
+
+## Exercício 6
+
+a) ALTER TABLE Movies ADD playing_Limit_Date DATE => Altera a tabela de Movies e adicione um novo parâmetro: playing_limit_date
+
+b) ALTER TABLE Movies CHANGE avaliacao rating FLOAT => Altere a tabela de Movies para que o parâmetro avaliação torne-se rating e possa aceitar valores não inteiros
