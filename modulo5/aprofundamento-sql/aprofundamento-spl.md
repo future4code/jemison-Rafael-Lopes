@@ -28,3 +28,12 @@ a) DELETE FROM Actor WHERE name = "Fernanda Montenegro" => apaga da tabela Actor
 
 b) DELETE FROM Actor WHERE gender = male AND salary > 1000000 => neste caso não achou correspondêcia com salary maior que 1.000.000,00
 
+## Exercício 4
+
+a) SELECT MAX(salary) FROM Actor => seleciona o maior salário na tabela Actor
+
+b) SELECT MIN(salary) FROM Actor WHERE gender = "female"=> seleciona o menor salário das atrizes na tabela Actor
+
+c) SELECT COUNT(*) FROM Actor WHERE gender = "female" => retorna a quantidade de atrizes na tabela Actor 
+
+d) SELECT SUM(salary) FROM Actor => retorna a soma de todos os salários da tabela Actor
