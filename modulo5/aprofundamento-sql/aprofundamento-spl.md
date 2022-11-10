@@ -21,3 +21,10 @@ c) UPDATE Actor SET name = "Moacyr Franco", birth_date = "2020-02-10", salary = 
 d) UPDATE Actor SET name = "Moacyr Franco" WHERE name = "Paula Soares" 
 
 Resultado: 0 row(s) affected Rows matched: 0  Changed: 0  Warnings: 0 => não encontrou correspondência com o name = "Paula Soares". Logo, nada mudou na tabela
+
+## Exercício 3
+
+a) DELETE FROM Actor WHERE name = "Fernanda Montenegro" => apaga da tabela Actor a atriz Fernanda Montenegro
+
+b) DELETE FROM Actor WHERE gender = male AND salary > 1000000 => neste caso não achou correspondêcia com salary maior que 1.000.000,00
+
