@@ -14,3 +14,5 @@ d) ALTER TABLE Rating DROP rating => apaga a coluna chamada rating.
 
 e) Tente apagar um filme que possua avaliações. Anote e explique o resultado da query.
 
+R: Haviam 4 rows, retornou 3
+
