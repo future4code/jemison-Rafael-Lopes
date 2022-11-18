@@ -51,20 +51,36 @@ app.use(cors())
 
 // Resposta Exercício 1- b
 
-const searchActor = async (name: string): Promise<any> => {
-    const result = await connection.raw(`
-      SELECT * FROM Actor WHERE name = "${name}"
-    `)
-    return result
-  }
+// const searchActor = async (name: string): Promise<any> => {
+//     const result = await connection.raw(`
+//       SELECT * FROM Actor WHERE name = "${name}"
+//     `)
+//     return result
+//   }
 
-  searchActor("Moacyr Franco")
-	.then(result => {
-		console.log(result)
-	})
-	.catch(err => {
-		console.log(err)
-	});
+//   searchActor("Moacyr Franco")
+// 	.then(result => {
+// 		console.log(result)
+// 	})
+// 	.catch(err => {
+// 		console.log(err)
+// 	});
+
+// Resposta Exercício 1- c
+
+const countActors = async (gender: string): Promise<any> => {
+    const result = await connection.raw(`
+      SELECT COUNT(*) as count FROM Actor WHERE gender = "${gender}"
+    `);
+
+    const count = result[0][0].count;
+    return count;
+};
+
+(async () => {
+    console.log('Quantidade de itens com o gender male:', await countActors("male"))
+    console.log('Quantidade de itens com o gender female:', await countActors("female"))
+})()
 
 // Configuração do servidor
 

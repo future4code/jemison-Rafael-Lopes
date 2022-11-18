@@ -6,4 +6,8 @@ R: Retornou os parâmetros de um ator específico: id, name, salary, birth_date 
 
 b) Faça uma função que busque um ator pelo nome.
 
-R: 
+R: Resposta no arquivo index.ts
+
+c) Faça uma função que receba um gender retorne a quantidade de itens na tabela Actor com esse gender. Para atrizes, female e para atores male.
+
+R: Resposta no arquivo index.ts
