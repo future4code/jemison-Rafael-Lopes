@@ -85,68 +85,76 @@ app.use(cors())
 
 // Resposta - Exercício 2- a
 
-const updateActor = async (id: string, salary: number): Promise<any> => {
+// const updateActor = async (id: string, salary: number): Promise<any> => {
 
 
-    await connection("Actor").update(
-        {
-            salary: salary,
-        }
-    ).where("id", id)
-};
+//     await connection("Actor").update(
+//         {
+//             salary: salary,
+//         }
+//     ).where("id", id)
+// };
 
-app.put("/actor/:id", async (req: Request, res: Response) => {
+// app.put("/actor/:id", async (req: Request, res: Response) => {
 
-    const actorId = req.query.id;
-    const { salary } = req.body;
+//     const actorId = req.query.id;
+//     const { salary } = req.body;
 
-    try {
-        if (!actorId) {
-            const erro = new Error("Informe o Id do Ator ou Atriz");
-            erro.name = "IdActorNotFound";
-            throw erro;
-        }
-        const id = req.query.id as string
+//     try {
+//         if (!actorId) {
+//             const erro = new Error("Informe o Id do Ator ou Atriz");
+//             erro.name = "IdActorNotFound";
+//             throw erro;
+//         }
+//         const id = req.query.id as string
 
-        await updateActor(id, salary)
+//         await updateActor(id, salary)
 
-        res.end()
-    } catch (error: any) {
-        console.log(error.message)
-        res.status(500).send("Unexpected error")
-    }
-});
+//         res.end()
+//     } catch (error: any) {
+//         console.log(error.message)
+//         res.status(500).send("Unexpected error")
+//     }
+// });
 
 // Resposta - Exercício 2- b
 
-const deleteActor = async (id: string): Promise<void> => {
-    await connection("Actor")
-      .delete()
-      .where("id", id);
-  }; 
+// const deleteActor = async (id: string): Promise<void> => {
+//     await connection("Actor")
+//       .delete()
+//       .where("id", id);
+//   }; 
 
-app.delete("/actor", async(req:Request, res:Response):Promise<void>=>{
-    const id = req.query.id as string;
+// app.delete("/actor", async(req:Request, res:Response):Promise<void>=>{
+//     const id = req.query.id as string;
 
-    try{
-        await connection.raw(`
-        SET foreing_key_checks = 0;
-        `)
-        await connection("Actor").delete().where("id", id)
-        await connection.raw(`
-        SET foreing_key_checks = 0;
-        `)
-        await deleteActor(id)
+//     try{
+//         await connection.raw(`
+//         SET foreing_key_checks = 0;
+//         `)
+//         await connection("Actor").delete().where("id", id)
+//         await connection.raw(`
+//         SET foreing_key_checks = 0;
+//         `)
+//         await deleteActor(id)
 
-        res.send("Item deletado com sucesso!")
-    }catch(error:any){
-        console.log(error.message);        
-    }
-});
+//         res.send("Item deletado com sucesso!")
+//     }catch(error:any){
+//         console.log(error.message);        
+//     }
+// });
 
+// Resposta - Exercício 2- c
 
+const avgSalary = async (gender: string): Promise<any> => {
+    const result = await connection("Actor").avg("salary as average").where({ gender });  
+    return result[0].average;
+  };
 
-
+(async () => {
+    console.log('Média de salário para o gender male:', await avgSalary("male"))
+    console.log('Média de salário para o gender female:', await avgSalary("female"))
+})();
 
 
 

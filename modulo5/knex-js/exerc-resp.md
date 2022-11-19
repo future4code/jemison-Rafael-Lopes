@@ -21,3 +21,9 @@ a) Uma função que receba um salário e um id e realiza a atualização do sal�
 R: Resposta no arquivo index.ts
 
 b) Uma função que receba um id e delete um ator da tabela
+
+R: Resposta no arquivo index.ts
+
+c) Uma função que receba um gender e devolva a média dos salários de atrizes ou atores desse gender
+
+R: Resposta no arquivo index.ts
