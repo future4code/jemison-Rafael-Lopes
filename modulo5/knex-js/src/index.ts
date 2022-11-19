@@ -117,6 +117,32 @@ app.put("/actor/:id", async (req: Request, res: Response) => {
     }
 });
 
+// Resposta - Exercício 2- b
+
+const deleteActor = async (id: string): Promise<void> => {
+    await connection("Actor")
+      .delete()
+      .where("id", id);
+  }; 
+
+app.delete("/actor", async(req:Request, res:Response):Promise<void>=>{
+    const id = req.query.id as string;
+
+    try{
+        await connection.raw(`
+        SET foreing_key_checks = 0;
+        `)
+        await connection("Actor").delete().where("id", id)
+        await connection.raw(`
+        SET foreing_key_checks = 0;
+        `)
+        await deleteActor(id)
+
+        res.send("Item deletado com sucesso!")
+    }catch(error:any){
+        console.log(error.message);        
+    }
+});
 
 
 

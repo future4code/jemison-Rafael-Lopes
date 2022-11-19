@@ -19,3 +19,5 @@ R: Resposta no arquivo index.ts
 a) Uma função que receba um salário e um id e realiza a atualização do salário do ator em questão.
 
 R: Resposta no arquivo index.ts
+
+b) Uma função que receba um id e delete um ator da tabela
