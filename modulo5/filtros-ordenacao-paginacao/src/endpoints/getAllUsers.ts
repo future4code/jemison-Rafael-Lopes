@@ -5,7 +5,7 @@ export const getAllUsers = async(req: Request,res: Response): Promise<void> =>{
    
    let statusCode = 400
    try {
-      
+      // Endpoint para que ele possa receber um parâmetro de filtragem por nome enviado por query params.. 
       let name = req.query.name 
 
       if(!name){
