@@ -22,11 +22,13 @@ export const createUser = async (req: Request, res: Response) => {
         // Refatorando para criar um novo User
         const newUser = new User(email, password);
 
-        await connection(TABLE_USERS).insert({
-            id: newUser.id,
-            email: newUser.email,
-            password: newUser.password
-        })
+        // await connection(TABLE_USERS).insert({
+        //     id: newUser.id,
+        //     email: newUser.email,
+        //     password: newUser.password
+        // })
+
+        await connection(TABLE_USERS).insert(newUser)
 
         res.status(201).send({ message: "Usuário criado", user: newUser })
     } catch (error) {
