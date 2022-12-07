@@ -1,8 +1,8 @@
 import { Product } from "../models/Product";
 import { PurchaseDB } from "../models/Purchase";
-import { User_data } from "../models/User";
+import { User } from "../models/User";
 
-export const users: User_data[] = [
+export const users: User[] = [
     {
         id: "101",
         email: "astrodev@gmail.com",
