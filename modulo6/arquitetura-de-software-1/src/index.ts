@@ -2,7 +2,7 @@ import {app} from "./app"
 
 
 
-app.get("/", async function(){
+app.get("/user", async function(){
    console.log("endpoint teste")
 })
 
