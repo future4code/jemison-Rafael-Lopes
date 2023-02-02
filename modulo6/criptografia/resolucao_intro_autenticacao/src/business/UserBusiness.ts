@@ -18,6 +18,7 @@ const userDatabase = new UserDatabase();
 const hashManager = new HashManager()
 
 export class UserBusiness {
+
   public createUser = async (input: UserInputDTO): Promise<string> => {
     try {
       const { name, nickname, email, password } = input;
@@ -37,14 +38,16 @@ export class UserBusiness {
         throw new InvalidEmail();
       }
 
-      const id: string = idGenerator.generateId()
+      const id: string = idGenerator.generateId();
 
+      // Para gerar uma senha hasheada
+      const hashPassword: string = await hashManager.generateHash(password)
       const user: user = {
         id,
         name,
         nickname,
         email,
-        password,
+        password: hashPassword // Passa a ser uma string hashPassword
       };
 
       await userDatabase.insertUser(user);
