@@ -7,12 +7,15 @@ import {
   EditUserInput,
   LoginInputDTO,
 } from "../model/user";
+import { HashManager } from "../services/HashManager";
 import { IdGenerator } from "../services/IdGenerator";
 import { TokenGenerator } from "../services/TokenGenerator";
 
 const idGenerator = new IdGenerator()
 const tokenGenerator = new TokenGenerator()
 const userDatabase = new UserDatabase();
+// Cria uma instânica do hashManager
+const hashManager = new HashManager()
 
 export class UserBusiness {
   public createUser = async (input: UserInputDTO): Promise<string> => {
@@ -43,7 +46,7 @@ export class UserBusiness {
         email,
         password,
       };
-   
+
       await userDatabase.insertUser(user);
       const token = tokenGenerator.generateToken(id)
 
@@ -56,7 +59,7 @@ export class UserBusiness {
   public login = async (input: LoginInputDTO): Promise<string> => {
     try {
       const { email, password } = input;
-    
+
       if (!email || !password) {
         throw new CustomError(
           400,
@@ -74,12 +77,12 @@ export class UserBusiness {
         throw new UserNotFound()
       }
 
-      if(password !== user.password){ 
+      if (password !== user.password) {
         throw new InvalidPassword()
       }
 
       const token = tokenGenerator.generateToken(user.id)
-     
+
       return token
     } catch (error: any) {
       throw new CustomError(400, error.message);
@@ -99,7 +102,7 @@ export class UserBusiness {
 
       const data = tokenGenerator.tokenData(token)
 
-      if(!data.id) {
+      if (!data.id) {
         throw new Unauthorized()
       }
 
@@ -120,13 +123,13 @@ export class UserBusiness {
     }
   };
 
-  public getUserById = async(token:string)=>{
+  public getUserById = async (token: string) => {
     try {
       const userDatabase = new UserDatabase()
       const user = await userDatabase.getUserById(token);
       return user
-    } catch (err:any) {
+    } catch (err: any) {
       throw new Error(err.message);
     }
-}
+  }
 }
