@@ -9,7 +9,7 @@ export class Authenticator {
         const token = jwt.sign(
             { id },
             process.env.JWT_KEY as string,
-            { expiresIn: "1h" }
+            { expiresIn: "1min" }
         )
         return token
     };
