@@ -40,6 +40,8 @@ export class UserBusiness {
 
       const id: string = idGenerator.generateId();
 
+      // Execício 2
+      // b) Faça a alteração do primeiro endpoint(cadastro/createUser)
       // Para gerar uma senha hasheada
       const hashPassword: string = await hashManager.generateHash(password)
       const user: user = {
@@ -80,7 +82,9 @@ export class UserBusiness {
         throw new UserNotFound()
       }
 
-      if (password !== user.password) {
+      // Para comparar a senha enviada com a armazenada no banco de dados utilizando a biblioteca de hash
+      const compareResult: boolean = await hashManager.compareHash(password, user.password)
+      if (!compareResult) {
         throw new InvalidPassword()
       }
 
