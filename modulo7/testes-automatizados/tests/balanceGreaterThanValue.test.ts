@@ -1,5 +1,5 @@
-import { User } from "../src/model/user"
-import performPurchase from "../src/purchase/performPurchase"
+import { User } from "../src/model/user";
+import performPurchase from "../src/purchase/performPurchase";
 
 // 2.a) Faça um teste com um usuário com o saldo maior do que o valor de compra
 test("Testing balance greater than the value", () => {
@@ -11,5 +11,5 @@ test("Testing balance greater than the value", () => {
     expect(result).toEqual({
         name: "Rafael",
         balance: 9500
-    })
-})
+    });
+});
