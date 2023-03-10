@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
-import { User } from "../class/user"
-import connection from "../database/connection"
-import { TABLE_USERS } from "../database/tableNames"
+import { User } from "../class/User"
+// import connection from "../database/connection"
+// import { TABLE_USERS } from "../database/tableNames"
 
 export const createUser = async (req: Request, res: Response) => {
     let errorCode = 400
