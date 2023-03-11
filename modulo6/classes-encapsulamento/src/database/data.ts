@@ -1,4 +1,4 @@
-import { Product } from "../models/Product";
+import { TProduct } from "../models/Product";
 import { PurchaseDB } from "../models/Purchase";
 import { User } from "../models/User";
 
@@ -20,7 +20,7 @@ export const users: User[] = [
     }
 ]
 
-export const products: Product[] = [
+export const products: TProduct[] = [
     {
         id: "201",
         name: "Webcam",
