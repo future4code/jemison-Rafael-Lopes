@@ -9,7 +9,7 @@ export class PurchaseDatabase extends BaseDatabase {
     public static TABLE_PURCHASES = "Labe_Purchases"
 
     public async getUserPurchases(id: string) {
-        const [result] = await BaseDatabase.connection.raw(`
+        const [result] = await PurchaseDatabase.connection.raw(`
         SELECT
             ${UserDatabase.TABLE_USERS}.email,
             ${ProductDatabase.TABLE_PRODUCTS}.name AS product_name,
