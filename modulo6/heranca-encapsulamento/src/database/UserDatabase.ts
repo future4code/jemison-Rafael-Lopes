@@ -30,4 +30,11 @@ export class UserDatabase extends BaseDatabase {
             .where({ id: id })
         return result
     };
+
+    public async getUserEmailById(id: string) {
+        const result = await BaseDatabase.connection(UserDatabase.TABLE_USERS)
+            .select()
+            .where({ id: id })
+        return result
+    };
 };

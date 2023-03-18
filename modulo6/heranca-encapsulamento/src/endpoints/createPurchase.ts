@@ -12,7 +12,7 @@ export const createPurchase = async (req: Request, res: Response) => {
     let errorCode = 400
     try {
         const userId = req.body.userId
-        const productId = req.body.productId
+        const productId = req.body.productId.toString()
         const quantity = req.body.quantity
 
         if (!userId || !productId || !quantity) {
