@@ -1,6 +1,9 @@
 import { Request, Response } from "express"
 // import connection from "../database/connection"
+import { ProductDatabase } from "../database/ProductDatabase";
+import { PurchaseDatabase } from "../database/PurchaseDatabase";
 import { TABLE_PRODUCTS, TABLE_PURCHASES, TABLE_USERS } from "../database/tableNames"
+import { UserDatabase } from "../database/UserDatabase";
 
 export const getUserPurchases = async (req: Request, res: Response) => {
     let errorCode = 400
@@ -22,8 +25,23 @@ export const getUserPurchases = async (req: Request, res: Response) => {
         // WHERE ${TABLE_PURCHASES}.user_id = ${id};
         // `);
 
-        const userPurchase = new UserPurchases()
-        res.status(200).send({ purchases: result })
+        const purchaseDatabase = new PurchaseDatabase()
+        const result = await purchaseDatabase.getUserPurchases(id)
+
+        const userDatabase = new UserDatabase()
+        const email = await userDatabase.getUserEmailById(id)
+
+        const purchases = result.map((purchase: any) => {
+            return {
+                email: email,
+                productName: purchase.product_name,
+                productPrice: purchase.product_price,
+                productQuantity: purchase.product_quantity,
+                totalPrice: purchase.total_price
+            };
+        });
+
+        res.status(200).send({ purchases: purchases })
     } catch (error) {
         res.status(errorCode).send({ message: error.message })
     };

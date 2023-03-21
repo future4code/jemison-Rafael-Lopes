@@ -30,8 +30,8 @@ export class PurchaseDatabase extends BaseDatabase {
         await BaseDatabase.connection(PurchaseDatabase.TABLE_PURCHASES)
             .insert({
                 id: purchase.getId(),
-                userId: purchase.getUserId(),
-                productId: purchase.getProductId(),
+                user_Id: purchase.getUserId(),
+                product_Id: purchase.getProductId(),
                 quantity: purchase.getQuantity(),
                 total_Price: purchase.getTotalPrice()
             });
