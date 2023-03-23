@@ -6,8 +6,7 @@
     "exercicio1": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exercicio1",
     "exercicio2": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exercicio2",
     "exercicio3": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exercicio3",
-    "exercicio4": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exercicio4",
-    "exercicio5": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exercicio5"
+    "exercicio4": "clear && tsnd --transpile-only --ignore-watch node_modules ./src/exercicio4"
   },
   "keywords": [],
   "author": "",
